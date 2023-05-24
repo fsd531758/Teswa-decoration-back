@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
 use Illuminate\Http\Request;
@@ -14,6 +15,9 @@ Route::group(['middleware' => 'APILocalization'], function () {
         Route::post('reset-forgot-password', 'AuthController@resetForgottenPassword');
         Route::post('update-token', 'AuthController@updateToken');
 
+        //home Route
+        Route::get('home', [HomeController::class, 'index']);
+        
         //Settings Route
         Route::get('setting', [SettingController::class, 'index']);
 
