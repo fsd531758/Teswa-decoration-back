@@ -7,7 +7,7 @@ return [
         "categories" => ["read", "create", "update", "delete"],
         "products" => ["read", "create", "update", "delete"],
         "projects" => ["read", "create", "update", "delete"],
-        "services" => ["read", "create", "update", "delete"],
+        "services" => ["read","update"],
         "teams" => ["read", "create", "update", "delete"],
         "testimonials" => ["read", "create", "update", "delete"],
         "partners" => ["read", "create", "update", "delete"],

@@ -3,9 +3,15 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AboutResource;
+use App\Http\Resources\ServiceResource;
 use App\Http\Resources\SliderResource;
+use App\Models\Page;
+use App\Models\Service;
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use PHPUnit\Util\Exception;
+
 
 class HomeController extends Controller
 {
@@ -13,24 +19,19 @@ class HomeController extends Controller
     {
         try {
             $sliders            = Slider::active()->get();
+            $about              = Page::where('identifier', 'about_us')->first();
+            $services            = Service::active()->get();
+
             // $partners           = Partner::active()->get();
-            // $funding_partners   = FundingPartner::active()->get();
-            // $about              = Page::where('identifier', 'about_us')->first();
-            // $statistics         = Page::where('identifier', 'statistics')->first();
-            // $separator_1        = Page::where('identifier', 'separator_1')->first();
-            // $separator_2        = Page::where('identifier', 'separator_2')->first();
-            // $newsletter         = Page::where('identifier', 'newsletter')->first();
+
+
 
             return successResponse(
                 [
                     "sliders"            => SliderResource::collection($sliders),
-                    // "about_us"           => new AboutResource($about),
-                    // "statistics"         => new StatisticResource($statistics),
-                    // "separator_1"        => new SeparatorOneResource($separator_1),
-                    // "separator_2"        => new SeparatorTwoResource($separator_2),
+                    "about_us"           => new AboutResource($about),
+                    "services"            => ServiceResource::collection($services),
                     // "partners"           => PartnerResource::collection($partners),
-                    // "funding_partners"   => PartnerResource::collection($funding_partners),
-                    // "newsletter"         => new NewsletterResource($newsletter),
                 ],
                 trans("message.retrieved_successfully"),
                 200
