@@ -17,5 +17,6 @@ return [
     'error_admin_role_update' => 'You can not edit Super Admin role',
     'active_session' => 'You still use this account right now, please contact administrator to delete your account if you want !',
     'retrieved_successfully'   => 'Entries retrieved successfully',
-
+    'sent_successfully' => 'Sent successfully',
+    'unsubscribed' => 'Unsubscribed successfully',
 ];

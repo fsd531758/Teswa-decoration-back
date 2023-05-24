@@ -28,7 +28,6 @@
               type="text/css"/>
         <link href="{{asset('dashboard/css/themes/layout/brand/dark.rtl.css')}}" rel="stylesheet" type="text/css"/>
         <link href="{{asset('dashboard/css/themes/layout/aside/dark.rtl.css')}}" rel="stylesheet" type="text/css"/>
-        <link href="{{asset('dashboard/css/custom.ar.css')}}" rel="stylesheet" type="text/css"/>
         <!--end::Layout Themes-->
 @else
     <!--begin::Fonts-->
@@ -56,6 +55,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="{{asset('dashboard/css/custom.css')}}" rel="stylesheet" type="text/css"/>
 </head>
 <!--end::Head-->
 <!--begin::Body-->

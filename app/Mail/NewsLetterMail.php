@@ -15,18 +15,18 @@ class NewsLetterMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $mail_body;
+    public $mail_data;
 
-    public function __construct($mail_body)
+    public function __construct($mail_data)
     {
-        $this->mail_body = $mail_body;
+        $this->mail_data = $mail_data;
     }
 
     public function envelope()
     {
         return new Envelope(
-            from: new Address(env("MAIL_FROM_ADDRESS"), env('MAIL_FROM_NAME')),
-            subject: 'Mail From Queue',
+            from: new Address(settings()->newsletter_email, env('MAIL_FROM_NAME')),
+            subject: $this->mail_data['subject'],
         );
     }
 

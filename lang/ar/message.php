@@ -17,6 +17,7 @@ return [
     'error_admin_role_update' => 'لا يمكنك تعديل دور المدير المتميز',
     'active_session' => 'ما زلت تستخدم هذا الحساب الآن ، يرجى الاتصال بالمسؤول لحذف حسابك إذا كنت تريد!',
     'retrieved_successfully' => 'تم العثور بنجاح',
-
+    'sent_successfully' => 'تم الإرسال بنجاح',
+    'unsubscribed' => 'تم إلغاء الاشتراك بنجاح',
 ];
 

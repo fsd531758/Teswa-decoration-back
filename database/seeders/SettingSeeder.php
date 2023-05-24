@@ -30,6 +30,8 @@ class SettingSeeder extends Seeder
                 'meta_keywords'         => 'Fan Al Meamar For Decoration',
                 'footer_description'    => '<p>Fan Al Meamar For Decoration</p>',
             ],
+            'contact_email' => 'mohamed@app.com',
+            'newsletter_email' => 'mohamed@app.com',
         ]);
         $setting->file()->create([
             'path' => 'seeders/settings/logo.png',
