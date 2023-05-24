@@ -24,8 +24,10 @@ class Setting extends Model
         "address",
         "copyrights",
         "meta_title",
+        "meta_keywords",
         "meta_description",
         "footer_description",
+
     ];
 
     public $timestamps = true;

@@ -9,7 +9,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 //    Auth::routes();
 
     Route::get('/', function () {
-        return view('welcome');
+        return view('admin.auth.login');
     })->name('home');
 });
 
