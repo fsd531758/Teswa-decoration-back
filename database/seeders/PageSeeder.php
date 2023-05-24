@@ -33,9 +33,31 @@ class PageSeeder extends Seeder
             ],
         ]);
 
-        // $page->file()->create([
-        //     "path" => "seeders/pages/about-homepage.png",
-        //     "type" => "image",
-        // ]);
+
+
+        //summary section Homepage
+        $page = Page::create([
+            "identifier" => "summary",
+            "has_sub_title" => 1,
+            "has_description" => 1,
+            "has_link" => 0,
+            "has_video" => 0,
+            "has_image" => 1,
+            "ar" => [
+                "title" => "في سوق الأثاث",
+                "sub_title" => "85 سنة",
+                "description" => "<p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p>",
+            ],
+            "en" => [
+                "title" => "We Have Furniture Expertise In Following Areas.",
+                "sub_title" => "85 Years",
+                "description" => "<p>In furniture market</p>",
+            ],
+        ]);
+
+        $page->file()->create([
+            "path" => "seeders/pages/chair.png",
+            "type" => "image",
+        ]);
     }
 }
