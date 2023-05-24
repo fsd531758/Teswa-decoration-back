@@ -20,7 +20,7 @@ class HomeController extends Controller
         try {
             $sliders            = Slider::active()->get();
             $about              = Page::where('identifier', 'about_us')->first();
-            $services            = Service::active()->get();
+            $services            = Service ::active()->get();
 
             // $partners           = Partner::active()->get();
 
