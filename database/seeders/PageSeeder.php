@@ -37,7 +37,7 @@ class PageSeeder extends Seeder
 
         //summary section Homepage
         $page = Page::create([
-            "identifier" => "summary",
+            "identifier" => "experience",
             "has_sub_title" => 1,
             "has_description" => 1,
             "has_link" => 0,

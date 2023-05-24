@@ -39,6 +39,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 
             //product routes
             Route::resource('services', 'ServiceController');
+            
+            //product routes
+            Route::resource('experiences', 'ExperienceController');
 
             //product routes
             Route::resource('projects', 'ProjectController');

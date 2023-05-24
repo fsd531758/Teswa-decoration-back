@@ -130,6 +130,13 @@ return [
     "edit_project" => "Edit Project",
     "create_project" => "Create Project",
 
+    "number"             => "Percentage",
+    "experiences"        => "Experiences",
+    "show_experiences"   => "Show Experiences",
+    "show_experience"    => "Show Experience",
+    "edit_experience"    => "Edit Experience",
+    "create_experience"  => "Create Experience",
+    
     "teams" => "Teams",
     "show_teams" => "Show Team",
     "show_team" => "Show Team member",

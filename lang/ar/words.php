@@ -129,6 +129,13 @@ return [
     "edit_project" => "تعديل المشروع",
     "create_project" => "إنشاء مشروع",
 
+    "number"                => "النسبة",
+    "experiences"           => "الخبرات",
+    "show_experiences"      => "عرض الخبرات",
+    "show_experience"       => "عرض الخبرة",
+    "edit_experience"       => "تعديل الخبرة",
+    "create_experience"     => "إنشاء خبرة",
+    
     "teams" => "فريق العمل",
     "show_teams" => "عرض فريق العمل",
     "show_team" => "عرض العضو",
@@ -137,6 +144,8 @@ return [
 
     "testimonials" => "أراء العملاء",
     "show_testimonials" => "عرض أراء العملاء",
+    "show_testimonials" => "ع
+    رض أراء العملاء",
     "show_testimonial" => "عرض الرأي",
     "edit_testimonial" => "تعديل الرأي",
     "create_testimonial" => "إنشاء رأى",

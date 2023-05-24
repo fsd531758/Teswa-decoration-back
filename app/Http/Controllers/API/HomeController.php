@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AboutResource;
+use App\Http\Resources\ExperienceResource;
 use App\Http\Resources\ServiceResource;
 use App\Http\Resources\SliderResource;
 use App\Http\Resources\SummaryResource;
@@ -22,7 +23,7 @@ class HomeController extends Controller
             $sliders              = Slider::active()->get();
             $about                = Page::where('identifier', 'about_us')->first();
             $services             = Service ::active()->get();
-            $summary              = Page::where('identifier', 'summary')->first();
+            $experience           = Page::where('identifier', 'experience')->first();
 
             // $partners           = Partner::active()->get();
 
@@ -33,7 +34,7 @@ class HomeController extends Controller
                     "sliders"            => SliderResource::collection($sliders),
                     "about_us"           => new AboutResource($about),
                     "services"           => ServiceResource::collection($services),
-                    "summary"            => new SummaryResource($summary),
+                    "experience"         => new ExperienceResource($experience),
                     // "partners"           => PartnerResource::collection($partners),
                 ],
                 trans("message.retrieved_successfully"),
