@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -14,13 +15,14 @@ Route::group(['middleware' => 'APILocalization'], function () {
         Route::post('update-token', 'AuthController@updateToken');
 
         //Settings Route
-        Route::get('setting'          , [SettingController::class, 'index']);
+        Route::get('setting', [SettingController::class, 'index']);
 
-
+        //Setting contacts Route
+        Route::get('contacts', [SettingContactController::class, 'index']);
     });
 
 
-// authenticated routes
+    // authenticated routes
     Route::group(['middleware' => ['jwt.verify:api']], function () {
         Route::group(['namespace' => 'Auth'], function () {
             Route::post('logout', 'AuthController@logout');
