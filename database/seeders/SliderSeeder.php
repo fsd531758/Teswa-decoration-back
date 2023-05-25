@@ -16,7 +16,7 @@ class SliderSeeder extends Seeder
             "status" => "1",
             "ar" => [
                 "title" => "فن المعمار للديكور",
-                "sub_title" => "جلب السحر إلى المنزل",
+                "sub_title" => "جعل المنزل أكثر روعة",
                 "description" => "<p>جميل وسلس وأنيق</p>",
             ],
 
@@ -36,7 +36,7 @@ class SliderSeeder extends Seeder
             "status" => "1",
             "ar" => [
                 "title" => "فن المعمار للديكور 1",
-                "sub_title" => "جلب السحر إلى المنزل",
+                "sub_title" => "جعل المنزل أكثر روعة",
                 "description" => "<p>جميل وسلس وأنيق</p>",
             ],
 
@@ -56,7 +56,7 @@ class SliderSeeder extends Seeder
             "status" => "1",
             "ar" => [
                 "title" => "فن المعمار للديكور 2",
-                "sub_title" => "جلب السحر إلى المنزل",
+                "sub_title" => "جعل المنزل أكثر روعة",
                 "description" => "<p>جميل وسلس وأنيق</p>",
             ],
 
@@ -76,7 +76,7 @@ class SliderSeeder extends Seeder
             "status" => "1",
             "ar" => [
                 "title" => "فن المعمار للديكور 3",
-                "sub_title" => "جلب السحر إلى المنزل",
+                "sub_title" => "جعل المنزل أكثر روعة",
                 "description" => "<p>جميل وسلس وأنيق</p>",
             ],
 

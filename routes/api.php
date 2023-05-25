@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\AboutController;
 use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
@@ -17,6 +18,9 @@ Route::group(['middleware' => 'APILocalization'], function () {
 
         //home Route
         Route::get('home', [HomeController::class, 'index']);
+        
+        //about Route
+        Route::get('about', [AboutController::class, 'index']);
         
         //Settings Route
         Route::get('setting', [SettingController::class, 'index']);
