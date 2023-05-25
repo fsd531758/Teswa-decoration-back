@@ -5,10 +5,12 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AboutResource;
 use App\Http\Resources\ExperienceResource;
+use App\Http\Resources\PartnerResource;
 use App\Http\Resources\ServiceResource;
 use App\Http\Resources\SliderResource;
 use App\Http\Resources\SummaryResource;
 use App\Models\Page;
+use App\Models\Partner;
 use App\Models\Service;
 use App\Models\Slider;
 use Illuminate\Http\Request;
@@ -24,8 +26,7 @@ class HomeController extends Controller
             $about                = Page::where('identifier', 'about_us')->first();
             $services             = Service ::active()->get();
             $experience           = Page::where('identifier', 'experience')->first();
-
-            // $partners           = Partner::active()->get();
+            $partners             = Partner::active()->get();
 
 
 
@@ -35,7 +36,7 @@ class HomeController extends Controller
                     "about_us"           => new AboutResource($about),
                     "services"           => ServiceResource::collection($services),
                     "experience"         => new ExperienceResource($experience),
-                    // "partners"           => PartnerResource::collection($partners),
+                    "partners"           => PartnerResource::collection($partners),
                 ],
                 trans("message.retrieved_successfully"),
                 200
