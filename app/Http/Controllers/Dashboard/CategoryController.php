@@ -66,10 +66,10 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         try {
-            $files = $category->files()->where('type', '!=', 'image')->get();
-            return view('admin.categories.show', compact('category', 'files'));
+            // $files = $category->files()->where('type', '!=', 'image')->get();
+            return view('admin.categories.show', compact('category'));
         } catch (\Exception $e) {
-            return redirect()->back()->with(['error' => __('message.something_wrong')]);
+            return redirect()->back()->with(['error' => $e->getMessage()]);
         }
     }
 

@@ -91,7 +91,7 @@
                             <div class="card-title">
                                 <h5 class="font-weight-bolder text-dark">{{__('words.category')}}:</h5>
                             </div>
-                            <p class="m-0">{{ $product->category ? $product->category->name : '' }}</p>
+                            <p class="m-0">{{ $product->category ? $product->category->title : '' }}</p>
                         </div>
                     </div>
                 </div>

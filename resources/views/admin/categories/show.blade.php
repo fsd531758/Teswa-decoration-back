@@ -51,21 +51,8 @@
                                     <p class="m-0">{{ $category->translate($locale)->title }}</p>
                                 </div>
                             </div>
-
                         </div>
                         <br>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="mb-7 bg-light p-5 rounded h-100">
-                                    <div class="card-title">
-                                        <h5 class="font-weight-bolder text-dark">{{ __('words.description') }}
-                                            - {{ __('words.locale-' . $locale) }}:</h5>
-                                    </div>
-                                    {!! $category->translate($locale)->description !!}
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
                 @endforeach
             </div>
@@ -88,9 +75,9 @@
                     <div class="col-md-4">
                         <div class="mb-7 bg-light p-5 rounded h-100">
                             <div class="card-title">
-                                <h5 class="font-weight-bolder text-dark">{{ __('words.category') }}:</h5>
+                                <h5 class="font-weight-bolder text-dark">{{ __('words.section') }}:</h5>
                             </div>
-                            <p class="m-0">{{ $category->category ? $category->category->name : '' }}</p>
+                            <p class="m-0">{{ $category->section ? $category->section->title : '' }}</p>
                         </div>
                     </div>
                 </div>
@@ -112,35 +99,7 @@
                 </div>
                 <br>
                 <br>
-                <div class="row">
-                    {{-- files start --}}
-                    @if ($files->isNotEmpty())
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="card card-primary">
-                                        <div class="card-header bg-secondary py-1 m-0">
-                                            <h4 class="card-title">{{ __('words.files') }}</h4>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                @foreach ($files as $file)
-                                                    <div class="col-sm-3 ">
-                                                        <a href="{{ $file->path }}" target="_blank" download>
-                                                            <img class="index_image" src="{{ asset('uploads/pdf.png') }}"
-                                                                alt="file">
-                                                        </a>
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                    {{-- files end --}}
-                </div>
+
             </div>
 
             @permission('update-categories')
