@@ -57,7 +57,6 @@
                         <th>#</th>
                         <th>{{ __('words.image') }}</th>
                         <th>{{ __('words.title') }}</th>
-                        <th>{{ __('words.section') }}</th>
                         <th>{{ __('words.status') }}</th>
                         <th>{{ __('words.created_at') }}</th>
                         <th>{{ __('words.updated_at') }}</th>
@@ -82,12 +81,11 @@
                                         data-title="{{ $category->title }}" data-gallery="gallery">
                                         <img class="index_image" src="{{ $category->image }}"
                                             onerror="this.src='{{ asset('uploads/default_image.png') }}'"
-                                            alt="category-image">
+                                            alt="slider-image">
                                     </a>
                                 @endif
                             </td>
                             <td>{{ $category->title }}</td>
-                            <td>{{ $category->section ? $category->section->title : '' }}</td>
                             <td><span
                                     class="badge rounded-pill text-white {{ $category->status == 1 ? 'bg-success' : 'bg-danger' }}">{{ $category->getActive() }}</span>
                             </td>

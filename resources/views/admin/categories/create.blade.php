@@ -64,6 +64,7 @@
                                 @enderror
                             </div>
                         </div>
+
                     </div>
                 @endforeach
             </div>
@@ -73,21 +74,34 @@
     <div class="card card-custom">
         <div class="card-body">
             <div class="form-group row">
-                @include('admin.components.icon', [
-                    'label' => __('words.icon'),
-                    'value' => old('icon', 'fab fa-github'),
-                    'required' => false,
-                ])
-            </div>
-
-            <div class="form-group row">
                 @include('admin.components.image', [
                     'label' => __('words.image'),
                     'value' => old('image'),
                     'name' => 'image',
                     'id' => 'kt_image_3',
+                    'accept' => 'image/*',
                     'required' => false,
                 ])
+
+            </div>
+
+            <div class="form-group row">
+                <div class="form-group col-6">
+                    <label for="exampleSelectd">{{ __('words.section') }}</label>
+                    <select class="form-control" id="exampleSelectd" name="section_id">
+                        <option value="">{{ __('words.choose') }}</option>
+                        @foreach ($sections as $section)
+                            <option value="{{ $section->id }}"
+                                {{ old('section_id') == $section->id ? 'selected' : '' }}>{{ $section->title }}
+                            </option>
+                        @endforeach
+                    </select>
+                    @error('section_id')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
 
                 @include('admin.components.switch', [
                     'label' => __('words.status'),
@@ -97,7 +111,6 @@
                 ])
 
             </div>
-
         </div>
 
     </div>

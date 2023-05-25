@@ -5,19 +5,22 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\CategoryRequest;
 use App\Models\Category;
+use App\Models\Section;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
 class CategoryController extends Controller
 {
+    private $section;
     private $category;
 
-    public function __construct(Category $category)
+    public function __construct(Category $category , Section $section)
     {
         $this->middleware(['permission:read-categories'])->only('index', 'show');
         $this->middleware(['permission:create-categories'])->only('create', 'store');
         $this->middleware(['permission:update-categories'])->only('edit', 'update');
         $this->middleware(['permission:delete-categories'])->only('destroy');
+        $this->section = $section;
         $this->category = $category;
     }
 
@@ -33,7 +36,12 @@ class CategoryController extends Controller
 
     public function create()
     {
-        return view('admin.categories.create');
+        try {
+            $sections = $this->section->active()->latest('id')->get();
+            return view('admin.categories.create', compact('sections'));
+        } catch (\Exception $e) {
+            return redirect()->back()->with(['error' => __('message.something_wrong')]);
+        }
     }
 
     public function store(CategoryRequest $request)
@@ -44,9 +52,10 @@ class CategoryController extends Controller
             else
                 $request->request->add(['status' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'files']);
             $category = $this->category->create($requested_data);
             $category->uploadFile();
+            $category->uploadFiles();
 
             return redirect()->route('categories.index')->with(['success' => __('message.created_successfully')]);
         } catch (\Exception $e) {
@@ -56,12 +65,22 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
-        return view('admin.categories.show', compact('category'));
+        try {
+            $files = $category->files()->where('type', '!=', 'image')->get();
+            return view('admin.categories.show', compact('category', 'files'));
+        } catch (\Exception $e) {
+            return redirect()->back()->with(['error' => __('message.something_wrong')]);
+        }
     }
 
     public function edit(Category $category)
     {
-        return view('admin.categories.edit', compact('category'));
+        try {
+            $sections = $this->section->latest('id')->get();
+            return view('admin.categories.edit', compact('category' , 'sections'));
+        } catch (\Exception $e) {
+            return redirect()->back()->with(['error' => __('message.something_wrong')]);
+        }
     }
 
     public function update(CategoryRequest $request, Category $category)
@@ -72,11 +91,8 @@ class CategoryController extends Controller
             else
                 $request->request->add(['status' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image','deleteFile']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'deleted_files']);
             $requested_data['updated_at'] = Carbon::now();
-            if ($request->has('deleteFile')){
-                $category->deleteFile();
-            }
             $category->update($requested_data);
 
             $category->updateFile();
@@ -90,11 +106,10 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         try {
-            $category->deleteFile();
             $category->delete();
             return redirect()->route('categories.index')->with(['success' => __('message.deleted_successfully')]);
         } catch (\Exception $e) {
-            return redirect()->back()->with(['error' => __('message.deleted_successfully')]);
+            return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
     }
 }

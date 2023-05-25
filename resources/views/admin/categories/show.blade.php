@@ -30,7 +30,7 @@
                     @foreach (config('translatable.locales') as $key => $locale)
                         <li class="nav-item">
                             <a class="nav-link  @if ($key == 0) active @endif" data-toggle="tab"
-                               href="{{ '#' . $locale }}">{{ __('words.locale-' . $locale) }}</a>
+                                href="{{ '#' . $locale }}">{{ __('words.locale-' . $locale) }}</a>
                         </li>
                     @endforeach
                 </ul>
@@ -40,7 +40,7 @@
             <div class="tab-content">
                 @foreach (config('translatable.locales') as $key => $locale)
                     <div class="tab-pane fade show @if ($key == 0) active @endif" id="{{ $locale }}"
-                         role="tabpanel">
+                        role="tabpanel">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mb-7 bg-light p-5 rounded h-100">
@@ -53,6 +53,19 @@
                             </div>
 
                         </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-7 bg-light p-5 rounded h-100">
+                                    <div class="card-title">
+                                        <h5 class="font-weight-bolder text-dark">{{ __('words.description') }}
+                                            - {{ __('words.locale-' . $locale) }}:</h5>
+                                    </div>
+                                    {!! $category->translate($locale)->description !!}
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 @endforeach
             </div>
@@ -60,73 +73,86 @@
 
         <div class="card card-custom">
             <div class="card-body">
-                <div class="row mb-3">
-                    <div class="col-md-4">
-                        <div class="mb-7 bg-light p-5 rounded h-100">
-                            <div class="card-title">
-                                <h5 class="font-weight-bolder text-dark">{{ __('words.created_at') }}:</h5>
-                            </div>
-                            <p class="m-0">{{ formatDate($category->created_at) }}</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-7 bg-light p-5 rounded h-100">
-                            <div class="card-title">
-                                <h5 class="font-weight-bolder text-dark">{{ __('words.updated_at') }}:</h5>
-                            </div>
-                            <p class="m-0">
-                                {{ formatDate($category->created_at) == formatDate($category->updated_at) ? '--' : formatDate($category->updated_at) }}
-                            </p>
-                        </div>
-                    </div>
-
+                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-7 bg-light p-5 rounded h-100">
                             <div class="card-title">
                                 <h5 class="font-weight-bolder text-dark">{{ __('words.activity') }}:</h5>
                             </div>
                             <p class="m-0"><span
-                                    class="badge rounded-pill text-white {{$category->status == 1 ? 'bg-success' : 'bg-danger'}}">{{ $category->getActive() }}</span>
+                                    class="badge rounded-pill text-white {{ $category->status == 1 ? 'bg-success' : 'bg-danger' }}">{{ $category->getActive() }}</span>
                             </p>
                         </div>
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-                    <div class="col-8">
-                        <a href="{{$category->image}}"
-                           data-toggle="lightbox" data-title="{{$category->title}}"
-                           data-gallery="gallery">
-                            <img src="{{ $category->image }}" class="img-fluid mb-2 image-galley"
-                                 onerror="this.src='{{ asset('uploads/default_image.png') }}'" alt="category-image"/>
-                        </a>
                     </div>
 
                     <div class="col-md-4">
                         <div class="mb-7 bg-light p-5 rounded h-100">
                             <div class="card-title">
-                                <h5 class="font-weight-bolder text-dark">{{ __('words.icon') }}:</h5>
+                                <h5 class="font-weight-bolder text-dark">{{ __('words.category') }}:</h5>
                             </div>
-                            <i class="{{ $category->icon }} fa-5x"></i>
+                            <p class="m-0">{{ $category->category ? $category->category->name : '' }}</p>
                         </div>
                     </div>
                 </div>
-
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-7 bg-light p-5 rounded h-100">
+                            <div class="card-title">
+                                <h5 class="font-weight-bolder text-dark">{{ __('words.image') }}:</h5>
+                            </div>
+                            <a href="{{ $category->image }}" data-toggle="lightbox" data-title="{{ $category->title }}"
+                                data-gallery="gallery">
+                                <img src="{{ $category->image }}" class="img-fluid mb-2 image-galley"
+                                    onerror="this.src='{{ asset('uploads/default_image.png') }}'" alt="category image" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    {{-- files start --}}
+                    @if ($files->isNotEmpty())
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card card-primary">
+                                        <div class="card-header bg-secondary py-1 m-0">
+                                            <h4 class="card-title">{{ __('words.files') }}</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                @foreach ($files as $file)
+                                                    <div class="col-sm-3 ">
+                                                        <a href="{{ $file->path }}" target="_blank" download>
+                                                            <img class="index_image" src="{{ asset('uploads/pdf.png') }}"
+                                                                alt="file">
+                                                        </a>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                    {{-- files end --}}
+                </div>
             </div>
 
             @permission('update-categories')
-            <div class="card-footer">
-                <div class="row">
-                    <div class="col-4">
-                        <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-block btn-outline-info">
-                            {{ __('words.edit') }}
-                        </a>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-block btn-outline-info">
+                                {{ __('words.edit') }}
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
             @endpermission
         </div>
     </div>

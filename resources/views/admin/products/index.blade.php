@@ -89,7 +89,7 @@
                             @endif
                         </td>
                         <td>{{ $product->title }}</td>
-                        <td>{{ $product->category ? $product->category->name : '' }}</td>
+                        <td>{{ $product->category ? $product->category->title : '' }}</td>
                         <td><span
                                 class="badge rounded-pill text-white {{$product->status == 1 ? 'bg-success' : 'bg-danger'}}">{{ $product->getActive() }}</span>
                         </td>

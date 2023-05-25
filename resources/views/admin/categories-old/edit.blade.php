@@ -65,18 +65,6 @@
                                 @enderror
                             </div>
                         </div>
-
-                        {{-- <div class="col form-group">
-                            <label>{{ __('words.description') }}({{ __('words.locale-' . $locale) }})<span
-                                    class="text-danger">*</span></label>
-                            <textarea class="form-control ckeditor @error($locale . '.description') is-invalid @enderror " type="text"
-                                name="{{ $locale . '[description]' }}" rows="4">{{ old($locale . '.description', $category->translate($locale)->description) }} </textarea>
-                            @error($locale . '[description]')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div> --}}
                     </div>
                 @endforeach
             </div>
@@ -86,39 +74,23 @@
     <div class="card card-custom">
         <div class="card-body">
             <div class="form-group row">
+                @include('admin.components.icon', [
+                    'label' => __('words.icon'),
+                    'value' => old('icon', $category->icon),
+                    'required' => false,
+                ])
+            </div>
+
+            <div class="form-group row">
                 @include('admin.components.image', [
                     'label' => __('words.image'),
                     'value' => old('image', $category->image),
                     'name' => 'image',
                     'id' => 'kt_image_3',
-                    'accept' => 'image/*',
+                    'deleteImage' => 'deleteImage',
                     'required' => false,
                 ])
 
-               
-            </div>
-
-          
-
-            <br>
-            <br>
-            <div class="form-group row">
-                <div class="form-group col-6">
-                    <label for="exampleSelectd">{{ __('words.section') }}</label>
-                    <select class="form-control" id="exampleSelectd" name="section_id">
-                        <option value="">{{ __('words.choose') }}</option>
-                        @foreach ($sections as $section)
-                            <option value="{{ $section->id }}"
-                                {{ old('section_id', $category->section_id) == $section->id ? 'selected' : '' }}>
-                                {{ $section->title }}</option>
-                        @endforeach
-                    </select>
-                    @error('section_id')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
 
                 @include('admin.components.switch', [
                     'label' => __('words.status'),
@@ -144,28 +116,4 @@
     </div>
 
 
-@endsection
-
-@section('scripts')
-    <script>
-        function getDeletedImages() {
-            $('#deleted_images').empty();
-
-            $('input[type="checkbox"].checkImage:checked').each(function() {
-                $('#deleted_images').append('<input type="hidden" name="deleted_files[]" value="' + $(this).attr(
-                    "id").replace('image-', '') + '">');
-
-            });
-        }
-
-        $(".checkImage").change(function() {
-            getDeletedImages();
-            if (this.checked) {
-                $(this).parent().find("img").addClass("delete");
-            } else {
-                $(this).parent().find("img").removeClass("delete");
-            }
-
-        });
-    </script>
 @endsection
