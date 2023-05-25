@@ -23,14 +23,13 @@ class Category extends Model
     public $timestamps = true;
 
     // relations start
-    public function products(){
-        return $this->hasMany(Product::class);
-    }
-
     public function section(){
         return $this->belongsTo(Section::class);
     }
     
+    public function products(){
+        return $this->hasMany(Product::class);
+    } 
     // relations end
 
     // Scopes start

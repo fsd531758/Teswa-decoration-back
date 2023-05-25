@@ -23,9 +23,9 @@ class Section extends Model
     public $timestamps = true;
 
     // relations start
-    // public function categories(){
-    //     return $this->hasMany(Category::class);
-    // }
+    public function categories(){
+        return $this->hasMany(Category::class);
+    }
     // relations end
 
     // Scopes start

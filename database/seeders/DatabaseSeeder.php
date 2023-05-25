@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ExperienceSeeder::class);
         $this->call(PartnerSeeder::class);
         $this->call(SectionSeeder::class);
+        $this->call(CategorySeeder::class);
         // NewsLetter::factory(6000)->create();
     }
 }
