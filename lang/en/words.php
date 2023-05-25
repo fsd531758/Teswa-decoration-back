@@ -149,12 +149,20 @@ return [
     "edit_testimonial" => "Edit Testimonial member",
     "create_testimonial" => "Create Testimonial member",
 
-    "categories" => "Catalogs",
-    "category" => "Catalog",
-    "show_categories" => "Show Catalogs",
-    "show_category" => "Show Catalog",
-    "edit_category" => "Edit Catalog",
-    "create_category" => "Create Catalog",
+    "categories" => "Categories",
+    "category" => "Category",
+    "show_categories" => "Show Categories",
+    "show_category" => "Show Category",
+    "edit_category" => "Edit Category",
+    "create_category" => "Create Category",
+
+    
+    "sections" => "Sections",
+    "section" => "Section",
+    "show_sections" => "Show Sections",
+    "show_section" => "Show Section",
+    "edit_section" => "Edit Section",
+    "create_section" => "Create Section",
 
     "products" => "Products",
     "show_products" => "Show Products",

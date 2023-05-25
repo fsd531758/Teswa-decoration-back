@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AboutController;
 use App\Http\Controllers\API\HomeController;
+use App\Http\Controllers\API\SectionController;
 use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
 use Illuminate\Http\Request;
@@ -21,6 +22,9 @@ Route::group(['middleware' => 'APILocalization'], function () {
         
         //about Route
         Route::get('about', [AboutController::class, 'index']);
+        
+        //sections Route
+        Route::get('sections', [SectionController::class, 'index']);
         
         //Settings Route
         Route::get('setting', [SettingController::class, 'index']);

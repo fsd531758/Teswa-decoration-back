@@ -5,6 +5,7 @@ return [
         "admins" => ["read", "create", "update", "delete", "updateProfile"],
         "sliders" => ["read", "create", "update", "delete"],
         "categories" => ["read", "create", "update", "delete"],
+        "sections" => ["read", "create", "update", "delete"],
         "products" => ["read", "create", "update", "delete"],
         "projects" => ["read", "create", "update", "delete"],
         "services" => ["read", "create", "update", "delete"],
