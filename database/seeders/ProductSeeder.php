@@ -21,6 +21,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس",
@@ -73,6 +74,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس 1",
@@ -115,6 +117,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس 2",
@@ -158,6 +161,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس3",
@@ -201,6 +205,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "2",
             "ar" => [
                 "title" => "ردي فكس 4",
@@ -244,6 +249,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "2",
             "ar" => [
                 "title" => "ردي فكس 5",
@@ -287,6 +293,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "2",
             "ar" => [
                 "title" => "ردي فكس 6",
@@ -330,6 +337,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "3",
             "ar" => [
                 "title" => "ردي فكس 7",
@@ -373,6 +381,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "3",
             "ar" => [
                 "title" => "ردي فكس 8",
@@ -416,6 +425,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "3",
             "ar" => [
                 "title" => "ردي فكس 9",
@@ -459,6 +469,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "4",
             "ar" => [
                 "title" => "ردي فكس 10",
@@ -502,6 +513,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "4",
             "ar" => [
                 "title" => "ردي فكس 11",
@@ -545,6 +557,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "price" => "300",
             "category_id" => "4",
             "ar" => [
                 "title" => "ردي فكس 12",
