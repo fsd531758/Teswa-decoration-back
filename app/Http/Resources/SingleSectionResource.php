@@ -2,10 +2,9 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Category;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class SectionResource extends JsonResource
+class SingleSectionResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,11 +14,10 @@ class SectionResource extends JsonResource
      */
     public function toArray($request)
     {
-        // $categories = Category::active()->get();
         return [
             'id'           => $this->id,
             'title'        => $this->title,
-            // 'categories'   => CategoryResource::collection($this->categories),
+            'categories'   => CategoryResource::collection($this->categories),
         ];
     }
 }

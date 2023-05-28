@@ -25,7 +25,13 @@ Route::group(['middleware' => 'APILocalization'], function () {
         
         //sections Route
         Route::get('sections', [SectionController::class, 'index']);
+
+        //sections Route To get Single section and categories
+        Route::get('sections/{id}', [SectionController::class, 'show_section']);
         
+
+
+
         //Settings Route
         Route::get('setting', [SettingController::class, 'index']);
 
