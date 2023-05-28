@@ -53,7 +53,7 @@ class ProductController extends Controller
             else
                 $request->request->add(['status' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'files']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'images']);
             $product = $this->product->create($requested_data);
             $product->uploadFile();
             $product->uploadFiles();
@@ -67,8 +67,8 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         try {
-            $files = $product->files()->where('type', '!=', 'image')->get();
-            return view('admin.products.show', compact('product', 'files'));
+            $images = $product->files()->where('type', '!=', 'image')->get();
+            return view('admin.products.show', compact('product', 'images'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
@@ -77,9 +77,9 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         try {
-            $files = $product->files()->where('type', '!=', 'image')->get();
+            $images = $product->files()->where('type', '!=', 'image')->get();
             $categories = $this->category->latest('id')->get();
-            return view('admin.products.edit', compact('product', 'files', 'categories'));
+            return view('admin.products.edit', compact('product', 'images', 'categories'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
@@ -93,7 +93,7 @@ class ProductController extends Controller
             else
                 $request->request->add(['status' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'files', 'deleted_files']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'images', 'deleted_files']);
             $requested_data['updated_at'] = Carbon::now();
             $product->update($requested_data);
 

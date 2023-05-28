@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\API\AboutController;
+use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\HomeController;
+use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\SectionController;
 use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
@@ -19,16 +21,22 @@ Route::group(['middleware' => 'APILocalization'], function () {
 
         //home Route
         Route::get('home', [HomeController::class, 'index']);
-        
+
         //about Route
         Route::get('about', [AboutController::class, 'index']);
-        
+
         //sections Route
         Route::get('sections', [SectionController::class, 'index']);
 
+        //categories Route
+        Route::get('categories', [CategoryController::class, 'index']);
+        
+        //products Route
+        Route::get('products', [ProductController::class, 'index']);
+
         //sections Route To get Single section and categories
         Route::get('sections/{id}', [SectionController::class, 'show_section']);
-        
+
 
 
 
@@ -52,5 +60,5 @@ Route::group(['middleware' => 'APILocalization'], function () {
     });
 
     // newsletter route
-    Route::post('newsletter','NewsletterController');
+    Route::post('newsletter', 'NewsletterController');
 });

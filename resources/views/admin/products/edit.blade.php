@@ -67,6 +67,18 @@
                         </div>
 
                         <div class="col form-group">
+                            <label>{{ __('words.short_description') }}({{ __('words.locale-' . $locale) }})<span
+                                    class="text-danger">*</span></label>
+                            <textarea class="form-control ckeditor @error($locale . '.short_description') is-invalid @enderror " type="text"
+                                name="{{ $locale . '[short_description]' }}" rows="4">{{ old($locale . '.short_description', $product->translate($locale)->short_description) }} </textarea>
+                            @error($locale . '[short_description]')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="col form-group">
                             <label>{{ __('words.description') }}({{ __('words.locale-' . $locale) }})<span
                                     class="text-danger">*</span></label>
                             <textarea class="form-control ckeditor @error($locale . '.description') is-invalid @enderror " type="text"
@@ -86,44 +98,42 @@
     <div class="card card-custom">
         <div class="card-body">
             <div class="form-group row">
-                @include('admin.components.image', [
+                {{-- @include('admin.components.image', [
                     'label' => __('words.image'),
                     'value' => old('image', $product->image),
                     'name' => 'image',
                     'id' => 'kt_image_3',
                     'accept' => 'image/*',
                     'required' => false,
-                ])
+                ]) --}}
 
                 @include('admin.components.files', [
-                    'label' => __('words.files'),
-                    'name' => 'files[]',
+                    'label' => __('words.images'),
+                    'name' => 'images[]',
                     'multi' => 'multiple',
-                    'accept' =>
-                        'application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint,text/plain, application/pdf',
+                    'accept' => 'image/*',
                 ])
             </div>
 
-            @if ($files->isNotEmpty())
+            @if ($images)
                 <div class="row">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
                                 <div class="card card-primary">
                                     <div class="card-header bg-secondary py-1 m-0">
-                                        <h4 class="card-title">{{ __('words.files') }}</h4>
+                                        <h4 class="card-title">{{ __('words.images') }}</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            @foreach ($files as $file)
+                                            @foreach ($images as $file)
                                                 <div class="col-md-3">
                                                     <div class="rounded border m-1">
                                                         <div>
 
-                                                            <a href="{{ $file->path }}" target="_blank" download>
-                                                                <img class="index_image"
-                                                                    src="{{ asset('uploads/pdf.png') }}" alt="file">
-                                                            </a>
+                                                            <img src="{{ $file->path }}"
+                                                                class="img-fluid mb-2 w-100 image-galley"
+                                                                alt="product image" />
 
                                                         </div>
                                                         <div class="form-check form-check-inline mx-2">

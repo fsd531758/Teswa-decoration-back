@@ -18,6 +18,7 @@ class CreateProductTranslationsTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->string('locale')->index();
             $table->string('title')->nullable();
+            $table->longText('short_description')->nullable();
             $table->longText('description')->nullable();
 
             $table->unique(['product_id', 'locale']);
