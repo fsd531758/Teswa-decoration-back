@@ -82,6 +82,7 @@ return [
     "no" => "No",
     "import" => "Import",
     "export" => "Export",
+    "price" => "Price",
 
     "show_masters" => "Show All Master Data",
     "show_master" => "Show Master Data",

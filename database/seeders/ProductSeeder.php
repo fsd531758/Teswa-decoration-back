@@ -68,8 +68,7 @@ class ProductSeeder extends Seeder
         $images_2 = [
             'seeders/products/05.jpg',
             'seeders/products/06.jpg',
-            'seeders/products/07.jpg',
-            'seeders/products/08.jpg',
+            
         ];
 
         $product = Product::create([
@@ -101,7 +100,7 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 2; $i++) {
             $product->files()->create([
                 "path" => $images_2[$i],
                 "type" => "image",
@@ -109,6 +108,8 @@ class ProductSeeder extends Seeder
         }
         //product 3
         $images_3 = [
+            'seeders/products/07.jpg',
+            'seeders/products/08.jpg',
             'seeders/products/09.jpg',
             'seeders/products/10.jpg',
             'seeders/products/11.jpg',
@@ -144,7 +145,7 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             $product->files()->create([
                 "path" => $images_3[$i],
                 "type" => "image",
@@ -157,6 +158,8 @@ class ProductSeeder extends Seeder
             'seeders/products/14.jpg',
             'seeders/products/15.jpg',
             'seeders/products/16.jpg',
+            'seeders/products/17.jpg',
+
         ];
 
         $product = Product::create([
@@ -188,7 +191,7 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             $product->files()->create([
                 "path" => $images_4[$i],
                 "type" => "image",
@@ -197,7 +200,6 @@ class ProductSeeder extends Seeder
 
         //product 5
         $images_5 = [
-            'seeders/products/17.jpg',
             'seeders/products/18.jpg',
             'seeders/products/19.jpg',
             'seeders/products/20.jpg',
@@ -232,7 +234,7 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             $product->files()->create([
                 "path" => $images_5[$i],
                 "type" => "image",
