@@ -21,12 +21,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                 <ul>
                                 <li>التأثير: بلوط</li>
                                 <li>اللون: رمادي فاتح</li>
@@ -38,7 +38,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                 <ul>
                                 <li>Effect: Oak</li>
                                 <li>Color: Light Grey</li>
@@ -68,17 +68,17 @@ class ProductSeeder extends Seeder
         $images_2 = [
             'seeders/products/05.jpg',
             'seeders/products/06.jpg',
-            
+
         ];
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس 1",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                         <ul>
                                         <li>التأثير: بلوط</li>
                                         <li>اللون: رمادي فاتح</li>
@@ -90,7 +90,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 1",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                         <ul>
                                         <li>Effect: Oak</li>
                                         <li>Color: Light Grey</li>
@@ -118,12 +118,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس 2",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                         <ul>
                                         <li>التأثير: بلوط</li>
                                         <li>اللون: رمادي فاتح</li>
@@ -135,7 +135,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 2",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                         <ul>
                                         <li>Effect: Oak</li>
                                         <li>Color: Light Grey</li>
@@ -164,12 +164,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس3",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                         <ul>
                                         <li>التأثير: بلوط</li>
                                         <li>اللون: رمادي فاتح</li>
@@ -181,7 +181,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 3",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                         <ul>
                                         <li>Effect: Oak</li>
                                         <li>Color: Light Grey</li>
@@ -207,12 +207,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "2",
             "ar" => [
                 "title" => "ردي فكس 4",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                         <ul>
                                         <li>التأثير: بلوط</li>
                                         <li>اللون: رمادي فاتح</li>
@@ -224,7 +224,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 4",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                         <ul>
                                         <li>Effect: Oak</li>
                                         <li>Color: Light Grey</li>
@@ -251,12 +251,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "2",
             "ar" => [
                 "title" => "ردي فكس 5",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                                 <ul>
                                                 <li>التأثير: بلوط</li>
                                                 <li>اللون: رمادي فاتح</li>
@@ -268,7 +268,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 5",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                                 <ul>
                                                 <li>Effect: Oak</li>
                                                 <li>Color: Light Grey</li>
@@ -295,12 +295,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "2",
             "ar" => [
                 "title" => "ردي فكس 6",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                                 <ul>
                                                 <li>التأثير: بلوط</li>
                                                 <li>اللون: رمادي فاتح</li>
@@ -312,7 +312,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 6",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                                 <ul>
                                                 <li>Effect: Oak</li>
                                                 <li>Color: Light Grey</li>
@@ -339,12 +339,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "3",
             "ar" => [
                 "title" => "ردي فكس 7",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                                         <ul>
                                                         <li>التأثير: بلوط</li>
                                                         <li>اللون: رمادي فاتح</li>
@@ -356,7 +356,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 7",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                                         <ul>
                                                         <li>Effect: Oak</li>
                                                         <li>Color: Light Grey</li>
@@ -383,12 +383,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "3",
             "ar" => [
                 "title" => "ردي فكس 8",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                                         <ul>
                                                         <li>التأثير: بلوط</li>
                                                         <li>اللون: رمادي فاتح</li>
@@ -400,7 +400,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 8",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                                         <ul>
                                                         <li>Effect: Oak</li>
                                                         <li>Color: Light Grey</li>
@@ -427,12 +427,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "3",
             "ar" => [
                 "title" => "ردي فكس 9",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                                         <ul>
                                                         <li>التأثير: بلوط</li>
                                                         <li>اللون: رمادي فاتح</li>
@@ -444,7 +444,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 9",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                                         <ul>
                                                         <li>Effect: Oak</li>
                                                         <li>Color: Light Grey</li>
@@ -471,12 +471,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "4",
             "ar" => [
                 "title" => "ردي فكس 10",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                                                 <ul>
                                                                 <li>التأثير: بلوط</li>
                                                                 <li>اللون: رمادي فاتح</li>
@@ -488,7 +488,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 10",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                                                 <ul>
                                                                 <li>Effect: Oak</li>
                                                                 <li>Color: Light Grey</li>
@@ -515,12 +515,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "4",
             "ar" => [
                 "title" => "ردي فكس 11",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                                                         <ul>
                                                                         <li>التأثير: بلوط</li>
                                                                         <li>اللون: رمادي فاتح</li>
@@ -532,7 +532,7 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 11",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                                                         <ul>
                                                                         <li>Effect: Oak</li>
                                                                         <li>Color: Light Grey</li>
@@ -559,12 +559,12 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
-            "price" => "300",
+            "price" => "70",
             "category_id" => "4",
             "ar" => [
                 "title" => "ردي فكس 12",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
-                "description" => "<p>أميال هو أحد مشاريع شركة أميال البناء - الرياض حى المعيزيلة</p>
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
                                                                         <ul>
                                                                         <li>التأثير: بلوط</li>
                                                                         <li>اللون: رمادي فاتح</li>
@@ -576,7 +576,95 @@ class ProductSeeder extends Seeder
             "en" => [
                 "title" => "Ready Fix 12",
                 "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
-                "description" => "<p>Amyal is one of the projects of Amyal Building Company - Riyadh, Al-Muayzelah District</p>
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
+                                                                        <ul>
+                                                                        <li>Effect: Oak</li>
+                                                                        <li>Color: Light Grey</li>
+                                                                        <li>Installation method: 1clic2go</li>
+                                                                        <li>Dimensions 8 x 192 x 1285mm (Thickness x Width x Length)</li>
+                                                                        </ul>",
+            ],
+        ]);
+
+        for ($i = 0; $i < 4; $i++) {
+            $product->files()->create([
+                "path" => $images_13[$i],
+                "type" => "image",
+            ]);
+        }
+
+        //product 3
+        $images_13 = [
+            'seeders/products/53.jpg',
+            'seeders/products/54.jpg',
+            'seeders/products/55.jpg',
+            'seeders/products/56.jpg',
+        ];
+
+        $product = Product::create([
+            "status" => "1",
+            "price" => "70",
+            "category_id" => "4",
+            "ar" => [
+                "title" => "ردي فكس 13",
+                "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
+                                                                        <ul>
+                                                                        <li>التأثير: بلوط</li>
+                                                                        <li>اللون: رمادي فاتح</li>
+                                                                        <li>طريقة التثبيت: 1 clic2go</li>
+                                                                        <li>الأبعاد 8 × 192 × 1285 مم (سمك × عرض × طول)</li>
+                                                                        </ul>",
+            ],
+
+            "en" => [
+                "title" => "Ready Fix 13",
+                "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
+                                                                        <ul>
+                                                                        <li>Effect: Oak</li>
+                                                                        <li>Color: Light Grey</li>
+                                                                        <li>Installation method: 1clic2go</li>
+                                                                        <li>Dimensions 8 x 192 x 1285mm (Thickness x Width x Length)</li>
+                                                                        </ul>",
+            ],
+        ]);
+
+        for ($i = 0; $i < 4; $i++) {
+            $product->files()->create([
+                "path" => $images_13[$i],
+                "type" => "image",
+            ]);
+        }
+
+        //product 3
+        $images_13 = [
+            'seeders/products/57.jpg',
+            'seeders/products/58.jpg',
+            'seeders/products/59.jpg',
+            'seeders/products/60.jpg',
+        ];
+
+        $product = Product::create([
+            "status" => "1",
+            "price" => "70",
+            "category_id" => "4",
+            "ar" => [
+                "title" => "ردي فكس 14",
+                "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
+                "description" => "<p>أميالتموجات من اللون البني الداكن والبني الفاتح تعطيك إطلالة جذابة وقريبة من لون الخشب الطبيعي . احصلي على أرضيات تلائم ذوقك. وصف العلامة التجارية توفر العلامة التجارية الألمانية الشهيرة ريدي فكس باركيه بجودة ممتازة وتصميمات وألوان ذات مظهر طبيعي يلائم الأذواق المختلفة ,صديق للبيئة, مقاوم للاشتعال,مقاوم للتآكل</p>
+                                                                        <ul>
+                                                                        <li>التأثير: بلوط</li>
+                                                                        <li>اللون: رمادي فاتح</li>
+                                                                        <li>طريقة التثبيت: 1 clic2go</li>
+                                                                        <li>الأبعاد 8 × 192 × 1285 مم (سمك × عرض × طول)</li>
+                                                                        </ul>",
+            ],
+
+            "en" => [
+                "title" => "Ready Fix 14",
+                "short_description" => "<p>KronoFlooring Original 5950 8MM</p>",
+                "description" => "<p> Dark brown and light brown ripples give you an attractive look close to the natural wood color. Get floors that suit your style. Brand description : The famous German brand ReadyFX Parquet provides excellent quality, designs and colors with natural appearance to suit different tastes , eco-friend,flame resistant, corrosion resistant</p>
                                                                         <ul>
                                                                         <li>Effect: Oak</li>
                                                                         <li>Color: Light Grey</li>
