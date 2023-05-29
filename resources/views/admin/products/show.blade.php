@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <br>
-                <br>
+                {{-- <br>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-7 bg-light p-5 rounded h-100">
@@ -120,24 +120,24 @@
                         </div>
                     </div>
                 </div>
-                <br>
+                <br> --}}
                 <br>
                 <div class="row">
                     {{-- files start --}}
-                    @if ($files->isNotEmpty())
+                    @if ($product->files())
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card card-primary">
                                         <div class="card-header bg-secondary py-1 m-0">
-                                            <h4 class="card-title">{{ __('words.files') }}</h4>
+                                            <h4 class="card-title">{{ __('words.images') }}</h4>
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
-                                                @foreach ($files as $file)
+                                                @foreach ($images as $file)
                                                     <div class="col-sm-3 ">
                                                         <a href="{{ $file->path }}" target="_blank" download>
-                                                            <img class="index_image" src="{{ asset('uploads/pdf.png') }}"
+                                                            <img class="index_image" src="{{ $file->path}}"
                                                                 alt="file">
                                                         </a>
                                                     </div>

@@ -67,7 +67,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         try {
-            $images = $product->files()->where('type', '!=', 'image')->get();
+            $images = $product->files()->where('type', '!=', 'cover')->get();
             return view('admin.products.show', compact('product', 'images'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
@@ -77,7 +77,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         try {
-            $images = $product->files()->where('type', '!=', 'image')->get();
+            $images = $product->files()->where('type', '!=', 'cover')->get();
             $categories = $this->category->latest('id')->get();
             return view('admin.products.edit', compact('product', 'images', 'categories'));
         } catch (\Exception $e) {
