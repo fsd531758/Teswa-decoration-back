@@ -59,7 +59,7 @@ class SettingSeeder extends Seeder
         ]);
 
         $setting->file()->create([
-            'path' => 'seeders/settings/breadcrumb.jpg',
+            'path' => 'seeders/settings/custom_breadcrumb.jpg',
             'type' => 'breadcrumb'
         ]);
     }
