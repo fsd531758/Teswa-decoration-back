@@ -83,6 +83,7 @@ return [
     "import" => "Import",
     "export" => "Export",
     "price" => "Price",
+    "is_trending" => "Trending Products",
 
     "show_masters" => "Show All Master Data",
     "show_master" => "Show Master Data",

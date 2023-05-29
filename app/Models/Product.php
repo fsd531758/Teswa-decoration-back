@@ -33,6 +33,11 @@ class Product extends Model
     {
         return $query->where('status', 1);
     }
+
+    public function scopeIsTrending($query)
+    {
+        return $query->where('is_trending', 1);
+    }
     // Scopes end
 
     // accessors & Mutator start
@@ -45,6 +50,11 @@ class Product extends Model
     public function getActive()
     {
         return $this->status == 1 ? __('words.active') : __('words.inactive');
+    }
+    
+    public function getIsTrending()
+    {
+        return $this->is_trending == 1 ? __('words.active') : __('words.inactive');
     }
     // accessors & Mutator end
 }

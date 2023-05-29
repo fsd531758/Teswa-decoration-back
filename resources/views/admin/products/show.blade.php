@@ -58,7 +58,7 @@
                                         <h5 class="font-weight-bolder text-dark">{{ __('words.short_description') }}
                                             - {{ __('words.locale-' . $locale) }}:</h5>
                                     </div>
-                                    <p class="m-0">{{ $product->translate($locale)->short_description }}</p>
+                                    <p class="m-0">{!! $product->translate($locale)->short_description !!}</p>
                                 </div>
                             </div>
 
@@ -84,7 +84,7 @@
         <div class="card card-custom">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-7 bg-light p-5 rounded h-100">
                             <div class="card-title">
                                 <h5 class="font-weight-bolder text-dark">{{ __('words.activity') }}:</h5>
@@ -94,13 +94,33 @@
                             </p>
                         </div>
                     </div>
+                    
+                    <div class="col-md-3">
+                        <div class="mb-7 bg-light p-5 rounded h-100">
+                            <div class="card-title">
+                                <h5 class="font-weight-bolder text-dark">{{ __('words.activity') }}:</h5>
+                            </div>
+                            <p class="m-0"><span
+                                    class="badge rounded-pill text-white {{ $product->is_trending == 1 ? 'bg-warning' : 'bg-danger' }}">{{ $product->getIsTrending() }}</span>
+                            </p>
+                        </div>
+                    </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-7 bg-light p-5 rounded h-100">
                             <div class="card-title">
                                 <h5 class="font-weight-bolder text-dark">{{ __('words.category') }}:</h5>
                             </div>
                             <p class="m-0">{{ $product->category ? $product->category->title : '' }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="mb-7 bg-light p-5 rounded h-100">
+                            <div class="card-title">
+                                <h5 class="font-weight-bolder text-dark">{{ __('words.price') }}:</h5>
+                            </div>
+                            <p class="m-0">{{ $product->price }}</p>
                         </div>
                     </div>
                 </div>
@@ -136,9 +156,9 @@
                                             <div class="row">
                                                 @foreach ($images as $file)
                                                     <div class="col-sm-3 ">
-                                                        <a href="{{ $file->path }}" target="_blank" download>
-                                                            <img class="index_image" src="{{ $file->path}}"
-                                                                alt="file">
+                                                        <a href="{{ $file->path }}" target="_blank">
+                                                            <img class="img-fluid mb-2 image-galley" src="{{ $file->path}}"
+                                                                alt="product image">
                                                         </a>
                                                     </div>
                                                 @endforeach

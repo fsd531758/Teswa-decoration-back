@@ -21,6 +21,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "70",
             "category_id" => "1",
             "ar" => [
@@ -73,6 +74,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "0",
             "price" => "65",
             "category_id" => "1",
             "ar" => [
@@ -119,6 +121,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "90",
             "category_id" => "1",
             "ar" => [
@@ -165,6 +168,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "0",
             "price" => "70",
             "category_id" => "1",
             "ar" => [
@@ -209,6 +213,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "70",
             "category_id" => "2",
             "ar" => [
@@ -254,6 +259,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "0",
             "price" => "50",
             "category_id" => "2",
             "ar" => [
@@ -292,6 +298,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "0",
             "price" => "60",
             "category_id" => "3",
             "ar" => [
@@ -334,6 +341,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "70",
             "category_id" => "3",
             "ar" => [
@@ -376,6 +384,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "70",
             "category_id" => "4",
             "ar" => [
@@ -422,6 +431,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "70",
             "category_id" => "4",
             "ar" => [
@@ -468,6 +478,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "0",
             "price" => "70",
             "category_id" => "4",
             "ar" => [
@@ -514,6 +525,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "70",
             "category_id" => "4",
             "ar" => [
@@ -560,6 +572,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "0",
             "price" => "95",
             "category_id" => "5",
             "ar" => [
@@ -602,6 +615,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "0",
             "price" => "110",
             "category_id" => "5",
             "ar" => [
@@ -644,6 +658,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "30",
             "category_id" => "6",
             "ar" => [
@@ -687,6 +702,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "30",
             "category_id" => "6",
             "ar" => [
@@ -729,6 +745,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "70",
             "category_id" => "7",
             "ar" => [
@@ -769,6 +786,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "30",
             "category_id" => "7",
             "ar" => [
@@ -809,6 +827,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "0",
             "price" => "30",
             "category_id" => "8",
             "ar" => [
@@ -849,6 +868,7 @@ class ProductSeeder extends Seeder
 
         $product = Product::create([
             "status" => "1",
+            "is_trending" => "1",
             "price" => "30",
             "category_id" => "8",
             "ar" => [

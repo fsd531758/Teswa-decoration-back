@@ -53,6 +53,11 @@ class ProductController extends Controller
             else
                 $request->request->add(['status' => 1]);
 
+            if (!$request->has('is_trending'))
+                $request->request->add(['is_trending' => 0]);
+            else
+                $request->request->add(['is_trending' => 1]);
+
             $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'images']);
             $product = $this->product->create($requested_data);
             $product->uploadFile();
@@ -92,6 +97,11 @@ class ProductController extends Controller
                 $request->request->add(['status' => 0]);
             else
                 $request->request->add(['status' => 1]);
+
+            if (!$request->has('is_trending'))
+                $request->request->add(['is_trending' => 0]);
+            else
+                $request->request->add(['is_trending' => 1]);
 
             $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'images', 'deleted_files']);
             $requested_data['updated_at'] = Carbon::now();

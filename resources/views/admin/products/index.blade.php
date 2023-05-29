@@ -60,6 +60,7 @@
                         <th>{{ __('words.category') }}</th>
                         <th>{{ __('words.short_description') }}</th>
                         <th>{{ __('words.status') }}</th>
+                        <th>{{ __('words.is_trending') }}</th>
                         <th>{{ __('words.created_at') }}</th>
                         <th>{{ __('words.updated_at') }}</th>
                         <th>{{ __('words.actions') }}</th>
@@ -92,6 +93,9 @@
                             <td>{!! $product->short_description !!}</td>
                             <td><span
                                     class="badge rounded-pill text-white {{ $product->status == 1 ? 'bg-success' : 'bg-danger' }}">{{ $product->getActive() }}</span>
+                            </td>
+                            <td><span
+                                    class="badge rounded-pill text-white {{ $product->is_trending == 1 ? 'bg-warning' : 'bg-danger' }}">{{ $product->getIsTrending() }}</span>
                             </td>
                             <td>{{ formatDate($product->created_at) }}</td>
                             <td>{{ formatDate($product->created_at) == formatDate($product->updated_at) ? '--' : formatDate($product->updated_at) }}

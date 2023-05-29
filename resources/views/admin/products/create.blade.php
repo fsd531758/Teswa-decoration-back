@@ -148,15 +148,24 @@
                         </span>
                     @enderror
                 </div>
-
-                @include('admin.components.switch', [
-                    'label' => __('words.status'),
-                    'name' => 'status',
-                    'val' => old('status'),
-                    'required' => false,
-                ])
-
             </div>
+
+            <div class="form-group row">
+                    @include('admin.components.switch', [
+                        'label' => __('words.status'),
+                        'name' => 'status',
+                        'val' => old('status'),
+                        'required' => false,
+                    ])
+    
+                    @include('admin.components.switch', [
+                        'label' => __('words.is_trending'),
+                        'name' => 'is_trending',
+                        'val' => old('is_trending'),
+                        'required' => false,
+                    ])
+            </div>
+
         </div>
 
     </div>

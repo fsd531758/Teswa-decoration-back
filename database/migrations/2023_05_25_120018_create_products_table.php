@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('category_id')->nullable();
             $table->boolean('status')->nullable();
+            $table->boolean('is_trending')->nullable();
             $table->integer('price')->nullable();
             $table->timestamps();
 

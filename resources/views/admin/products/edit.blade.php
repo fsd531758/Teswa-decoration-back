@@ -98,6 +98,22 @@
     <div class="card card-custom">
         <div class="card-body">
             <div class="form-group row">
+                <div class="col-12 form-group">
+                    <label>{{ __('words.price') }}<span class="text-danger"> * </span></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
+                        </div>
+                        <input type="number" name="{{ 'price' }}" placeholder="{{ __('words.price') }}"
+                            class="form-control  pl-5 min-h-40px @error('price') is-invalid @enderror"
+                            value="{{ old('price', $product->price) }}">
+                        @error('[price]')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                </div>
                 {{-- @include('admin.components.image', [
                     'label' => __('words.image'),
                     'value' => old('image', $product->image),
@@ -181,6 +197,8 @@
                         </span>
                     @enderror
                 </div>
+            </div>
+            <div class="form-group row">
 
                 @include('admin.components.switch', [
                     'label' => __('words.status'),
@@ -188,12 +206,16 @@
                     'val' => old('status', $product->status),
                     'required' => false,
                 ])
+                
+                @include('admin.components.switch', [
+                    'label' => __('words.is_trending'),
+                    'name' => 'is_trending',
+                    'val' => old('is_trending', $product->is_trending),
+                    'required' => false,
+                ])
             </div>
-
         </div>
-
     </div>
-
 
     <div class="card-footer">
         <div class="row">
