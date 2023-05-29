@@ -154,5 +154,23 @@ class PageSeeder extends Seeder
             "path" => "seeders/pages/msg.jpg",
             "type" => "image",
         ]);
+
+        //trending_products
+        $page = Page::create([
+            "identifier" => "trending_products",
+            "has_sub_title" => 1,
+            "has_description" => 0,
+            "has_link" => 0,
+            "has_video" => 0,
+            "has_image" => 0,
+            "ar" => [
+                "title" => "تقديم منتجات رائجة في جميع أنحاء العالم",
+                "sub_title" => "مجموعة شاملة من المنتجات",
+            ],
+            "en" => [
+                "title" => "Delivering Worldwide Trending Products",
+                "sub_title" => "Comprehenssive range of products",
+            ],
+        ]);
     }
 }

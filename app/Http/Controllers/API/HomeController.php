@@ -30,7 +30,8 @@ class HomeController extends Controller
             $services             = Service ::active()->get();
             $experience           = Page::where('identifier', 'experience')->first();
             $partners             = Partner::active()->get();
-            $trending_products    = Product::active()->isTrending()->get();
+            // $trending_products    = Product::active()->isTrending()->get();
+            $trending_products    = Page::where('identifier', 'trending_products')->first();
 
 
 
@@ -41,7 +42,8 @@ class HomeController extends Controller
                     "services"               => ServiceResource::collection($services),
                     "experience"             => new ExperienceResource($experience),
                     "partners"               => PartnerResource::collection($partners),
-                    "trending_products"      => ProductResource::collection($trending_products),
+                    "trending_products"      => new TrendingProductsResource($trending_products),
+                    // "trending_products"      => ProductResource::collection($trending_products),
                 ],
                 trans("message.retrieved_successfully"),
                 200
