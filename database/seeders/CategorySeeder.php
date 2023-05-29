@@ -84,22 +84,22 @@ class CategorySeeder extends Seeder
         ]);
 
         //category 5
-        $category = Category::create([
-            "status" => "1",
-            "section_id" => "2",
-            "ar" => [
-                "title" => "جدارى خشبى داخلى",
-            ],
+        // $category = Category::create([
+        //     "status" => "1",
+        //     "section_id" => "2",
+        //     "ar" => [
+        //         "title" => "جدارى خشبى داخلى",
+        //     ],
 
-            "en" => [
-                "title" => "Wood",
-            ],
-        ]);
+        //     "en" => [
+        //         "title" => "Wood",
+        //     ],
+        // ]);
 
-        $category->file()->create([
-            "path" => "seeders/categories/wood.jpg",
-            "type" => "image",
-        ]);
+        // $category->file()->create([
+        //     "path" => "seeders/categories/wood.jpg",
+        //     "type" => "image",
+        // ]);
 
         //category 6
         $category = Category::create([
@@ -138,40 +138,40 @@ class CategorySeeder extends Seeder
         ]);
 
         //category 6
-        $category = Category::create([
-            "status" => "1",
-            "section_id" => "3",
-            "ar" => [
-                "title" => "عشب أرضى",
-            ],
+        // $category = Category::create([
+        //     "status" => "1",
+        //     "section_id" => "3",
+        //     "ar" => [
+        //         "title" => "عشب أرضى",
+        //     ],
 
-            "en" => [
-                "title" => "Ground Grass",
-            ],
-        ]);
+        //     "en" => [
+        //         "title" => "Ground Grass",
+        //     ],
+        // ]);
 
-        $category->file()->create([
-            "path" => "seeders/categories/ground_grass.jpg",
-            "type" => "image",
-        ]);
+        // $category->file()->create([
+        //     "path" => "seeders/categories/ground_grass.jpg",
+        //     "type" => "image",
+        // ]);
 
         //category 6
-        $category = Category::create([
-            "status" => "1",
-            "section_id" => "4",
-            "ar" => [
-                "title" => "براويز جدارية",
-            ],
+        // $category = Category::create([
+        //     "status" => "1",
+        //     "section_id" => "4",
+        //     "ar" => [
+        //         "title" => "براويز جدارية",
+        //     ],
 
-            "en" => [
-                "title" => "Wall Frames",
-            ],
-        ]);
+        //     "en" => [
+        //         "title" => "Wall Frames",
+        //     ],
+        // ]);
 
-        $category->file()->create([
-            "path" => "seeders/categories/wall_frames.jpg",
-            "type" => "image",
-        ]);
+        // $category->file()->create([
+        //     "path" => "seeders/categories/wall_frames.jpg",
+        //     "type" => "image",
+        // ]);
 
         //category 6
         $category = Category::create([
@@ -205,7 +205,7 @@ class CategorySeeder extends Seeder
         ]);
 
         $category->file()->create([
-            "path" => "seeders/categories/home _antiques.jpg",
+            "path" => "seeders/categories/home_antiques.jpg",
             "type" => "image",
         ]);
     }
