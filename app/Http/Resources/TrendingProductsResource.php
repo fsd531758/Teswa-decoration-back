@@ -21,7 +21,7 @@ class TrendingProductsResource extends JsonResource
             'id'                  => $this->id,
             'title'               => $this->title,
             'sub_title'           => $this->sub_title,
-            'trending_products'   => ProductResource::collection($trending_products),
+            'products'   => ProductResource::collection($trending_products),
         ];
     }
 }
