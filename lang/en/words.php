@@ -248,6 +248,13 @@ return [
     "rights" => "All Rights Reserved By ",
     "download" => "Click here to download",
     "breadcrumb" => "Breadcrumb image",
+    "contact_requests" => "Contact Us Requests",
+    'reply' => 'Reply',
+    'reply_msg' => 'Reply For Your Message',
+    'reply_request' => 'Reply For Your Request',
+    'reply_content' => 'Message Content',
+    'msg_reply'        => 'Reply To Message Sent Successfully',
+
 
     "ar" => [
         "title" => "Title In Arabic",

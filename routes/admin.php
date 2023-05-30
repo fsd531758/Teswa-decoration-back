@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\ContactRequestController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -74,6 +75,11 @@ Route::group([
 
             //contact routes
             Route::resource('contacts', 'SettingContactController');
+            
+            //contact routes
+            Route::resource('contact_requests', 'ContactRequestController');
+            Route::get('contact_requests/{contact_request}/reply', [ContactRequestController::class, 'reply'])->name('contact_requests.reply');
+            Route::post('contact_requests/{contact_request}/send_mail', [ContactRequestController::class, 'send_mail'])->name('contact_requests.send_mail');
 
             //news-letter routes
             Route::resource('news-letters', 'NewsLetterController');
