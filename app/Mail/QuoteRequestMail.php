@@ -44,14 +44,6 @@ class QuoteRequestMail extends Mailable
 
     public function attachments()
     {
-        // $file = $this->quote_request->file()->first();
-        // if ($file) {
-        //     $path = $file->getRawOriginal('path');
-        //     return [
-        //         Attachment::fromStorage($path),
-        //     ];
-        // }
-
         // for attaching from request direct
         if (isset($this->quote_request['file']))
                     return Attachment::fromData(fn () => file_get_contents($this->quote_request['file']), $this->quote_request['file']->getClientOriginalName())->withMime($this->quote_request['file']->getClientMimeType());

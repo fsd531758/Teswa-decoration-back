@@ -21,7 +21,7 @@ class QuoteRequest extends FormRequest
             'email'         => 'required|email',
             'phone'         => 'required|string|regex:/^([0-9\s\-\+\(\)]*)$/|min:6|max:30',
             'message'       => 'required|min:2|max:500',
-            'file'          => 'nullable|mimes:ppt,pptx,doc,docx,pdf,xls,xlsx,txt|max:5000',
+            'file'          => 'nullable|mimes:ppt,pptx,doc,docx,pdf,xls,xlsx,txt|max:5120',
         ];
 
         return $rules;
