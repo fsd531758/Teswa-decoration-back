@@ -11,12 +11,10 @@ class QuoteRequestController extends Controller
 {
     public function quote_request(QuoteRequest $request)
     {
-
+//return $request;
         try {
-            $quote_request      =  Quote::create($request->except('file'));
-            // Mail::to(CONTACT_US_MAIL)->send(new \App\Mail\ContactUsMail($contact_us));
-
-
+            $quote_request = Quote::create($request->except('file'));
+            $quote_request->uploadFile();
             return successResponse(
                 [],
                 trans("message.request_sent_successfully"),
