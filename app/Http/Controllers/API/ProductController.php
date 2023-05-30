@@ -33,8 +33,6 @@ class ProductController extends Controller
     {
         try {
             $product = Product::active()->findOrFail($id);
-            // return $product;
-            // $products = Product::active()->get();
             return successResponse(
                 new SingleProductresource($product),
                 trans("message.retrieved_successfully"),

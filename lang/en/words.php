@@ -241,7 +241,7 @@ return [
     "subscribed" => "Subscribed Users",
 
     "contact_details" => "Contact Details",
-    "contact_request" => "Contact request from: ",
+    "contact_request" => "Contact request from",
     "message" => "Message",
     "rights" => "All Rights Reserved By ",
     "download" => "Click here to download",

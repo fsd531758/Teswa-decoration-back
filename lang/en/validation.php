@@ -194,6 +194,12 @@ return [
         "identifier" => "Identifier",
         "contact" => "Contact",
         "social" => "Social Media Link",
+        "fname" => "First Name",
+        "lname" => "Last Name",
+        "message" => "Message",
+        "phone" => "Phone",
+        "email" => "Email",
+        // "file" => "File",
 
         "ar" => [
             "title" => "Title In Arabic",

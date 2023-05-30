@@ -3,6 +3,8 @@
 use App\Models\Permission;
 
 const PAGINATION_COUNT = 10;
+const CONTACT_US_MAIL = 'asmaamarzouk410@gmail.com';
+
 
 function successResponse($data = [], $message = "", $status = 200)
 {

@@ -31,7 +31,7 @@ return [
     "name" => "الإسم",
     "description" => "الوصف",
     "sub_description" => "وصف مختصر",
-    "first_name" => "اإسم الأول",
+    "first_name" => "الإسم الأول",
     "last_name" => "الإسم الأخير",
     "created_by" => "الإنشاء بواسطة",
     "updated_by" => "التعديل بواسطة",
@@ -241,7 +241,7 @@ return [
     "subscribed" => "المشتركين فى القوائم البريدية",
 
     "contact_details" => "تفاصيل الإتصال",
-    "contact_request" => "طلب إتصال مقدم من: ",
+    "contact_request" => "طلب إتصال مقدم من",
     "message" => "الرسالة",
     "rights" => "جميع الحقوق محفوظة بواسطة ",
     "download" => "إضغط هنا للتحميل",
