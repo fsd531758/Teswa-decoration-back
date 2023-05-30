@@ -2,10 +2,9 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Product;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class TrendingProductsResource extends JsonResource
+class SingleProductresource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,13 +14,14 @@ class TrendingProductsResource extends JsonResource
      */
     public function toArray($request)
     {
-        $trending_products    = Product::active()->isTrending()->get(); 
-
         return [
             'id'                  => $this->id,
             'title'               => $this->title,
-            'sub_title'           => $this->sub_title,
-            'products'            => ProductResource::collection($trending_products),
+            'short_description'   => $this->short_description,
+            'description'         => $this->description,
+            'price'               => $this->price,
+            'images'              => ImageResource::collection($this->files) ,
+            'category'            => new CategoryResource($this->category),
         ];
     }
 }

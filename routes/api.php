@@ -33,6 +33,11 @@ Route::group(['middleware' => 'APILocalization'], function () {
         
         //products Route
         Route::get('products', [ProductController::class, 'index']);
+        
+        //single_product Route
+        Route::get('products/{id}', [ProductController::class, 'show_product']);
+        // Route::get('sections/{id}/categories/{category_id}/products', [ProductController::class, 'show_product']);
+        // Route::get('sections/{section}/categories/{category_id}', [ProductController::class, 'show_product']);
 
         //sections Route To get Single section and categories
         Route::get('sections/{id}', [SectionController::class, 'show_section']);
