@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Validation\ValidationException;
 
-class ContactUsRequest extends FormRequest
+class QuoteRequest extends FormRequest
 {
     public function authorize()
     {
@@ -21,6 +21,8 @@ class ContactUsRequest extends FormRequest
             'email'         => 'required|email',
             'phone'         => 'required|string|regex:/^([0-9\s\-\+\(\)]*)$/|min:6|max:30',
             'message'       => 'required|min:2|max:500',
+            'file'          => 'nullable|mimes:ppt,pptx,doc,docx,pdf,xls,xlsx,txt|max:5000',
+            // 'file.*'        => '',
         ];
 
         return $rules;

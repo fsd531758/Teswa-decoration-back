@@ -5,6 +5,7 @@ use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\ContactUsController;
 use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\ProductController;
+use App\Http\Controllers\API\QuoteRequestController;
 use App\Http\Controllers\API\SectionController;
 use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
@@ -36,6 +37,8 @@ Route::group(['middleware' => 'APILocalization'], function () {
         Route::get('sections/{id}' , [SectionController::class       , 'show_section']);
         //contact us Route
         Route::post('contact'       , [ContactUsController::class     , 'contact']);
+        //contact us Route
+        Route::post('request_quote'   , [QuoteRequestController::class     , 'quote_request']);
         //Settings Route
         Route::get('setting'       , [SettingController::class       , 'index']);
         //Setting contacts Route

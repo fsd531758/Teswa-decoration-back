@@ -18,6 +18,7 @@ return [
     'active_session' => 'ما زلت تستخدم هذا الحساب الآن ، يرجى الاتصال بالمسؤول لحذف حسابك إذا كنت تريد!',
     'retrieved_successfully' => 'تم العثور بنجاح',
     'sent_successfully' => 'تم الإرسال بنجاح',
+    'request_sent_successfully' => 'تم إرسال طلبك بنجاح',
     'unsubscribed' => 'تم إلغاء الاشتراك بنجاح',
 ];
 
