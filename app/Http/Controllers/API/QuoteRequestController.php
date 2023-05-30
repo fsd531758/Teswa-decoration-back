@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\API\QuoteRequest;
 use App\Models\Quote;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 
 class QuoteRequestController extends Controller
 {
@@ -15,6 +17,8 @@ class QuoteRequestController extends Controller
         try {
             $quote_request = Quote::create($request->except('file'));
             $quote_request->uploadFile();
+            Mail::to(QUOTE_REQUEST_MAIL)->send(new \App\Mail\QuoteRequestMail($request->all()));
+
             return successResponse(
                 [],
                 trans("message.request_sent_successfully"),

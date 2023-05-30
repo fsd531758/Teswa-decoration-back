@@ -242,6 +242,8 @@ return [
 
     "contact_details" => "تفاصيل الإتصال",
     "contact_request" => "طلب إتصال مقدم من",
+    "request_details"      => "تفاصيل طلب عرض سعر",
+    "request_details_from" => "طلب عرض سعر مقدم من",
     "message" => "الرسالة",
     "rights" => "جميع الحقوق محفوظة بواسطة ",
     "download" => "إضغط هنا للتحميل",

@@ -240,8 +240,10 @@ return [
     "show_subscribed_users" => "Show Subscribed Users",
     "subscribed" => "Subscribed Users",
 
-    "contact_details" => "Contact Details",
-    "contact_request" => "Contact request from",
+    "contact_details"      => "Contact Details",
+    "contact_request"      => "Contact request from",
+    "request_details"      => "Quotation request Details",
+    "request_details_from" => "Quotation Request from",
     "message" => "Message",
     "rights" => "All Rights Reserved By ",
     "download" => "Click here to download",
