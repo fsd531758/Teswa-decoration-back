@@ -3,7 +3,7 @@
 use App\Models\Permission;
 
 const PAGINATION_COUNT = 10;
-const CONTACT_US_MAIL = 'asmaamarzouk410@gmail.com';
+const CONTACT_US_MAIL = 'booking@demoyoursite.net';
 
 
 function successResponse($data = [], $message = "", $status = 200)
