@@ -29,6 +29,8 @@ Route::group(['middleware' => 'APILocalization'], function () {
         Route::get('sections'      , [SectionController::class       , 'index']);
         //categories Route
         Route::get('categories'    , [CategoryController::class      , 'index']);
+        //categories Route
+        Route::get('categories/{id}'    , [CategoryController::class      , 'show_category']);
         //products Route
         Route::get('products'      , [ProductController::class       , 'index']);
         //single_product Route
