@@ -179,6 +179,17 @@
                 </div>
 
                 <div class="col form-group">
+                    <label>{{ __('words.whatsapp') }}<span class="text-danger">*</span></label>
+                    <input dir="ltr" class="form-control text-start @error('whatsapp') is-invalid @enderror "
+                        type="text" name="{{ 'whatsapp' }}" value="{{ old('whatsapp', $setting->whatsapp) }}" />
+                    @error('whatsapp')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                {{-- <div class="col form-group">
                     <label>{{ __('words.contact_email') }}<span
                             class="text-danger">*</span></label>
                     <input class="form-control @error('contact_email') is-invalid @enderror " type="email"
@@ -188,9 +199,9 @@
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-                </div>
+                </div> --}}
 
-                <div class="col form-group">
+                {{-- <div class="col form-group">
                     <label>{{ __('words.newsletter_email') }}<span
                             class="text-danger">*</span></label>
                     <input class="form-control @error('newsletter_email') is-invalid @enderror " type="email"
@@ -200,7 +211,7 @@
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-                </div>
+                </div> --}}
             </div>
             <div class="form-group row">
                 @include('admin.components.image', [
@@ -226,14 +237,14 @@
                    'id' => 'kt_image_3',
                    'required' => false,
                ])
-
+{{-- 
                 @include('admin.components.image', [
                     'label' => __('words.contact_img'),
                     'value' => $setting->contact_img,
                     'name' => 'contact_img',
                     'id' => 'kt_image_4',
                     'required' => false,
-                ])
+                ]) --}}
 
                 @include('admin.components.image', [
                     'label' => __('words.footer_img'),

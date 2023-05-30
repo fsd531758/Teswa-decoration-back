@@ -26,7 +26,7 @@ class SettingResource extends JsonResource
             'logo'                   => $this->logo,
             'white_logo'             => $this->white_logo,
             'favicon'                => $this->favicon,
-            'contact_img'            => $this->contact_img,
+            // 'contact_img'            => $this->contact_img,
             'footer_img'             => $this->footer_img,
             'breadcrumb'             => $this->breadcrumb,
             'map'                    => $this->map,
