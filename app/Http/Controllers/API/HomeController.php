@@ -7,6 +7,7 @@ use App\Http\Resources\AboutResource;
 use App\Http\Resources\ExperienceResource;
 use App\Http\Resources\PartnerResource;
 use App\Http\Resources\ProductResource;
+use App\Http\Resources\QuotationResource;
 use App\Http\Resources\ServiceResource;
 use App\Http\Resources\SliderResource;
 use App\Http\Resources\SummaryResource;
@@ -32,6 +33,7 @@ class HomeController extends Controller
             $partners             = Partner::active()->get();
             // $trending_products    = Product::active()->isTrending()->get();
             $trending_products    = Page::where('identifier', 'trending_products')->first();
+            $quotation            = Page::where('identifier', 'quotation')->first();
 
 
 
@@ -43,6 +45,7 @@ class HomeController extends Controller
                     "experience"             => new ExperienceResource($experience),
                     "partners"               => PartnerResource::collection($partners),
                     "trending_products"      => new TrendingProductsResource($trending_products),
+                    "quotation"              => new QuotationResource($quotation),
                     // "trending_products"      => ProductResource::collection($trending_products),
                 ],
                 trans("message.retrieved_successfully"),

@@ -172,5 +172,31 @@ class PageSeeder extends Seeder
                 "sub_title" => "Comprehenssive range of products",
             ],
         ]);
+
+
+        //message
+        $page = Page::create([
+            "identifier" => "quotation",
+            "has_sub_title" => 1,
+            "has_description" => 1,
+            "has_link" => 0,
+            "has_video" => 0,
+            "has_image" => 1,
+            "ar" => [
+                "title" => "طلب عرض سعر",
+                "sub_title" => "اطلب عرض سعر",
+                "description" => "<p>إملأ النموذج وسنقوم بالرد مع عرض أسعار مخصص لاحتياجاتك</p>",
+            ],
+            "en" => [
+                "title" => "Get Quotation",
+                "sub_title" => "Request A Quote",
+                "description" => "<p>Fill the form and we will reply with a custom quote for yoyr needs</p>",
+            ],
+        ]);
+
+        $page->file()->create([
+            "path" => "seeders/pages/quotation.jpg",
+            "type" => "image",
+        ]);
     }
 }
