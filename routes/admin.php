@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\ContactRequestController;
+use App\Http\Controllers\Dashboard\QuoteRequestController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -80,6 +81,11 @@ Route::group([
             Route::resource('contact_requests', 'ContactRequestController');
             Route::get('contact_requests/{contact_request}/reply', [ContactRequestController::class, 'reply'])->name('contact_requests.reply');
             Route::post('contact_requests/{contact_request}/send_mail', [ContactRequestController::class, 'send_mail'])->name('contact_requests.send_mail');
+
+            //Quote Request routes
+            Route::resource('quote_requests', 'QuoteRequestController');
+            Route::get('quote_requests/{quote_request}/reply', [QuoteRequestController::class, 'reply'])->name('quote_requests.reply');
+            Route::post('quote_requests/{quote_request}/send_mail', [QuoteRequestController::class, 'send_mail'])->name('quote_requests.send_mail');
 
             //news-letter routes
             Route::resource('news-letters', 'NewsLetterController');

@@ -14,6 +14,7 @@ return [
         "contacts" => ["read", "create", "update", "delete"],
         "settings" => ["read", "update"],
         "contact_requests" => ["read", "delete", "reply"],
+        "quote_requests" => ["read", "delete", "reply"],
         // "projects" => ["read", "create", "update", "delete"],
         // "teams" => ["read", "create", "update", "delete"],
         // "testimonials" => ["read", "create", "update", "delete"],

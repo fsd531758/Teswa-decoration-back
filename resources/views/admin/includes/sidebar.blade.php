@@ -789,6 +789,18 @@
                     </li>
                 @endpermission
                 {{-- contact_requests route end --}}
+                
+                {{-- quote_requests route start --}}
+                @permission('read-quote_requests')
+                    <li class="menu-item {{ request()->routeIs('quote_requests.*') ? 'menu-item-active' : '' }}"
+                        aria-haspopup="true">
+                        <a href="{{ route('quote_requests.index') }}" class="menu-link">
+                            <i class="fas fa-comment-alt svg-icon menu-icon"></i>
+                            <span class="menu-text">{{ __('words.quote_requests') }}</span>
+                        </a>
+                    </li>
+                @endpermission
+                {{-- quote_requests route end --}}
 
                 {{-- course routes start --}}
                 @permission('read-courses')

@@ -254,6 +254,9 @@ return [
     'reply_request' => 'رد على طلبك',
     'reply_content' => 'محتوى الرسالة',
     'msg_reply' => 'تم الرد على الرسالة بنجاح',
+    'quote_request_reply' => 'تم الرد على الطلب بنجاح',
+    'quote_requests' => 'طلبات عرض السعر',
+    'reply_request_content' => 'رد على طلبك',
 
 
     "ar" => [

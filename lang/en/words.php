@@ -254,6 +254,9 @@ return [
     'reply_request' => 'Reply For Your Request',
     'reply_content' => 'Message Content',
     'msg_reply'        => 'Reply To Message Sent Successfully',
+    'quote_request_reply'   => 'Reply To Quotation Request Sent Successfully',
+    'quote_requests'        => 'Quotation Requests',
+    'reply_request_content'        => 'Reply For Your Quotation Request',
 
 
     "ar" => [
