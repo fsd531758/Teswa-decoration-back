@@ -251,6 +251,7 @@ return [
     "contact_requests" => "Contact Us Requests",
     'show_contact_requests' => 'Contact Us Requests',
     'show_quote_requests' => 'Quotation Requests',
+    'reply_to' => 'Reply To',
 
     'reply_for_msg' => 'Reply For Contact Message',
     'reply_for_request' => 'Reply For Quotation Request Message',

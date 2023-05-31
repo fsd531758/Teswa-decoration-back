@@ -92,6 +92,19 @@
                     </div>
                 </div>
             </div>
+
+            @permission('reply-contact_requests')
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="{{ route('contact_requests.reply', $contact_request->id) }}" class="btn btn-block btn-outline-info">
+                                {{ __('words.reply') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            @endpermission
+
         </div>
     </div>
 @endsection

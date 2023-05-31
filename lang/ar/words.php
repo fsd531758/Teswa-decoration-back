@@ -254,6 +254,7 @@ return [
 
     'reply_for_msg' => 'رد على رسالة تواصل',
     'reply_for_request' => 'رد على رسالة طلب عرض سعر',
+    'reply_to' => 'رد على',
 
 
     'reply' => 'رد',

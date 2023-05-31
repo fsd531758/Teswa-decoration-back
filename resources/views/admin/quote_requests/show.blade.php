@@ -94,38 +94,50 @@
 
                 <br>
                 <br>
-                {{-- <div class="row"> --}}
+                <div class="row">
                     {{-- files start --}}
-                    {{-- @if($files->isNotEmpty())
+                    @if ($file)
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-3">
                                     <div class="card card-primary">
                                         <div class="card-header bg-secondary py-1 m-0">
-                                            <h4 class="card-title">{{__('words.files')}}</h4>
+                                            <h4 class="card-title">{{ __('words.file') }}</h4>
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
-                                                @foreach($files as $file)
-                                                    <div class="col-sm-3 ">
-                                                        <a href="{{$file->path}}" target="_blank" download>
-                                                            <img class="index_image"
-                                                                 src="{{asset('uploads/pdf.png')}}" alt="file">
+                                                    <div class="col d-flex justify-content-center">
+                                                        <a href="{{ $file->path }}" target="_blank" download>
+                                                            <img class="index_image" src="{{ asset('uploads/pdf.png') }}"
+                                                                alt="file">
                                                         </a>
                                                     </div>
-                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @endif --}}
+                    @endif
                     {{-- files end --}}
-                {{-- </div> --}}
+                </div>
 
-                
+
             </div>
+
+            @permission('reply-quote_requests')
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="{{ route('quote_requests.reply', $quote_request->id) }}"
+                                class="btn btn-block btn-outline-info">
+                                {{ __('words.reply') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            @endpermission
+
         </div>
     </div>
 @endsection

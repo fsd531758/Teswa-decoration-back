@@ -27,6 +27,21 @@
     @method('post')
     <div class="card card-custom mb-2">
         <input type="hidden" name="id" value="{{ $contact_request->id }}">
+        <div class="card-header card-header-tabs-line">
+            <div class="card-title w-100">
+                <div class="row w-100">
+                    <div class="col-12 col-md-6 col-lg-12 col-xl-6 my-2 text-capitalize">
+                            <span  class="card-label">{{ __('words.reply_to') }} : </span>
+                            <span class="font-weight-light">{{ $contact_request->fname . ' ' . $contact_request->lname }}</span>
+                    </div>
+                    <div class='col-12 col-md-6 col-lg-12 col-xl-6 my-2'>
+                            <span class="card-label">{{ __('words.email') }} : </span>
+                            <span class="font-weight-light">{{ $contact_request->email }}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         <div class="card-body">
             <div class="col form-group">
                 <label>{{ __('words.subject') }}<span class="text-danger"></span></label>
