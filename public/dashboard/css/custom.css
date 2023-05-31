@@ -77,3 +77,12 @@ body[dir="rtl"] {
 #custom_datatable_wrapper .row > *[class^='col'] {
     overflow-x: auto;
 }
+
+.text-limit {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: var(--lines) !important;
+    line-clamp: var(--lines) !important;
+    -webkit-box-orient: vertical !important;
+}

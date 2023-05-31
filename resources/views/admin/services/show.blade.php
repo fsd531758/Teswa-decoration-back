@@ -41,7 +41,7 @@
                 @foreach (config('translatable.locales') as $key => $locale)
                     <div class="tab-pane fade show @if ($key == 0) active @endif" id="{{ $locale }}"
                         role="tabpanel">
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="mb-7 bg-light p-5 rounded h-100">
                                     <div class="card-title">
@@ -53,7 +53,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-md-12">
                                 <div class="mb-7 bg-light p-5 rounded h-100">
                                     <div class="card-title">

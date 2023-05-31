@@ -58,9 +58,9 @@ class ProductController extends Controller
             else
                 $request->request->add(['is_trending' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'images']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove','images']);
             $product = $this->product->create($requested_data);
-            $product->uploadFile();
+            // $product->uploadFile();
             $product->uploadFiles();
 
             return redirect()->route('products.index')->with(['success' => __('message.created_successfully')]);
@@ -103,11 +103,11 @@ class ProductController extends Controller
             else
                 $request->request->add(['is_trending' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'images', 'deleted_files']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'images', 'deleted_files']);
             $requested_data['updated_at'] = Carbon::now();
             $product->update($requested_data);
 
-            $product->updateFile();
+            // $product->updateFile();
             $product->updateFiles();
 
             return redirect()->route('products.index')->with(['success' => __('message.updated_successfully')]);

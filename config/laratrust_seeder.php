@@ -10,7 +10,7 @@ return [
         "services" => ["read", "create", "update", "delete"],
         "experiences" => ["read", "create", "update", "delete"],
         "partners" => ["read", "create", "update", "delete"],
-        "pages" => ["read", "create", "update"],
+        "pages" => ["read", "update"],
         "contacts" => ["read", "create", "update", "delete"],
         "settings" => ["read", "update"],
         "contact_requests" => ["read", "delete", "reply"],

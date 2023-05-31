@@ -44,9 +44,8 @@ class ServiceController extends Controller
             else
                 $request->request->add(['status' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove']);
             $service = $this->service->create($requested_data);
-            $service->uploadFile();
 
             return redirect()->route('services.index')->with(['success' => __('message.created_successfully')]);
         } catch (\Exception $e) {
@@ -72,11 +71,10 @@ class ServiceController extends Controller
             else
                 $request->request->add(['status' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove']);
             $requested_data['updated_at'] = Carbon::now();
             $service->update($requested_data);
 
-            $service->updateFile();
 
             return redirect()->route('services.index')->with(['success' => __('message.updated_successfully')]);
         } catch (\Exception $e) {
@@ -87,7 +85,6 @@ class ServiceController extends Controller
     public function destroy(Service $service)
     {
         try {
-            $service->deleteFile();
             $service->delete();
             return redirect()->route('services.index')->with(['success' => __('message.deleted_successfully')]);
         } catch (\Exception $e) {

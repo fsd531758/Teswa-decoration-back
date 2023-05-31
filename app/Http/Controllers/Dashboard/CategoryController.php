@@ -52,21 +52,19 @@ class CategoryController extends Controller
             else
                 $request->request->add(['status' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image', 'files']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'image']);
             $category = $this->category->create($requested_data);
             $category->uploadFile();
-            $category->uploadFiles();
 
             return redirect()->route('categories.index')->with(['success' => __('message.created_successfully')]);
         } catch (\Exception $e) {
-            return redirect()->back()->with(['error' => __('message.something_wrong')]);
+            return redirect()->back()->with(['error' => $e->getMessage()]);
         }
     }
 
     public function show(Category $category)
     {
         try {
-            // $files = $category->files()->where('type', '!=', 'image')->get();
             return view('admin.categories.show', compact('category'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => $e->getMessage()]);

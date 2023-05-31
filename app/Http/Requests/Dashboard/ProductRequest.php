@@ -16,9 +16,9 @@ class ProductRequest extends FormRequest
     {
         $rules = [
             'category_id' => 'required_without:id|exists:categories,id',
-            'image' => 'required_without:id|max:5000|image',
-            'files' => 'nullable|array',
-            'files.*' => 'mimes:ppt,pptx,doc,docx,pdf,xls,xlsx,txt|max:5000',
+            'images' => 'required_without:id|array',
+            'images.*' => 'image|max:900',
+            'price' => 'required|numeric',
 
         ];
         foreach (config('translatable.locales') as $locale) {

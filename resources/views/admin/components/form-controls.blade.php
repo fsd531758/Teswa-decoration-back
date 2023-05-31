@@ -65,14 +65,14 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body"> {{ __('message.delete_message') }} <b
-                                class="">
+                        <div class="modal-body text-limit" style='--lines: 1;'> {{ __('message.delete_message') }} <b
+                            >
                                 @if($value->name)
-                                    {{$value->name}}
+                                    {{Str::limit($value->name, 50)}}
                                 @elseif($value->title)
-                                    {!! $value->title !!}
+                                    {!! Str::limit($value->title, 50) !!}
                                 @else
-                                    {{$value->email}}
+                                    {{Str::limit($value->email, 50)}}
                                 @endif
                             </b></div>
                         <div class="modal-footer">

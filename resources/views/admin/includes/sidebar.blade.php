@@ -219,7 +219,7 @@
                 @endpermission
                 {{-- slider routes end --}}
 
-                {{-- category routes start --}}
+                {{-- section routes start --}}
                 @permission('read-sections')
                     <li class="menu-item menu-item-submenu {{ request()->routeIs('sections.*') ? 'menu-item-open menu-item-here' : '' }}"
                         aria-haspopup="true" data-menu-toggle="hover">
@@ -259,14 +259,14 @@
                         </div>
                     </li>
                 @endpermission
-                {{-- category routes end --}}
+                {{-- section routes end --}}
 
                 {{-- category routes start --}}
                 @permission('read-categories')
                     <li class="menu-item menu-item-submenu {{ request()->routeIs('categories.*') ? 'menu-item-open menu-item-here' : '' }}"
                         aria-haspopup="true" data-menu-toggle="hover">
                         <a href="javascript:;" class="menu-link menu-toggle">
-                            <i class="fas fa-layer-group svg-icon menu-icon"></i>
+                            <i class="far fa-lightbulb svg-icon menu-icon"></i>
                             <span class="menu-text">{{ __('words.categories') }}</span>
                             <i class="menu-arrow"></i>
                         </a>
@@ -308,7 +308,7 @@
                     <li class="menu-item menu-item-submenu {{ request()->routeIs('products.*') ? 'menu-item-open menu-item-here' : '' }}"
                         aria-haspopup="true" data-menu-toggle="hover">
                         <a href="javascript:;" class="menu-link menu-toggle">
-                            <i class="fab fa-product-hunt svg-icon menu-icon"></i>
+                            <i class="fas fa-chair svg-icon menu-icon"></i>
                             <span class="menu-text">{{ __('words.products') }}</span>
                             <i class="menu-arrow"></i>
                         </a>
@@ -789,13 +789,13 @@
                     </li>
                 @endpermission
                 {{-- contact_requests route end --}}
-                
+
                 {{-- quote_requests route start --}}
                 @permission('read-quote_requests')
                     <li class="menu-item {{ request()->routeIs('quote_requests.*') ? 'menu-item-active' : '' }}"
                         aria-haspopup="true">
                         <a href="{{ route('quote_requests.index') }}" class="menu-link">
-                            <i class="fas fa-comment-alt svg-icon menu-icon"></i>
+                            <i class="far fa-list-alt svg-icon menu-icon"></i>
                             <span class="menu-text">{{ __('words.quote_requests') }}</span>
                         </a>
                     </li>

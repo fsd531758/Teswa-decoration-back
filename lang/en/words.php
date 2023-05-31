@@ -249,6 +249,8 @@ return [
     "download" => "Click here to download",
     "breadcrumb" => "Breadcrumb image",
     "contact_requests" => "Contact Us Requests",
+    'show_contact_requests' => 'Contact US Requests',
+
     'reply' => 'Reply',
     'reply_msg' => 'Reply For Your Message',
     'reply_request' => 'Reply For Your Request',

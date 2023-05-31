@@ -249,6 +249,8 @@ return [
     "download" => "إضغط هنا للتحميل",
     "breadcrumb" => "صورة مسار التنقل",
     "contact_requests" => "طلبات تواصل معنا",
+    'show_contact_requests' => 'رسائل طلبات التواصل',
+
     'reply' => 'رد',
     'reply_msg' => 'رد على رسالتك',
     'reply_request' => 'رد على طلبك',

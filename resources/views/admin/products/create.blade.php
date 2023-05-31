@@ -114,14 +114,7 @@
                         @enderror
                     </div>
                 </div>
-                {{-- @include('admin.components.image', [
-                    'label' => __('words.image'),
-                    'value' => old('image'),
-                    'name' => 'image',
-                    'id' => 'kt_image_3',
-                    'accept' => 'image/*',
-                    'required' => false,
-                ]) --}}
+
 
                 @include('admin.components.files', [
                     'label' => __('words.images'),

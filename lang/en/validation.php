@@ -199,6 +199,7 @@ return [
         "message" => "Message",
         "phone" => "Phone",
         "email" => "Email",
+        "price" => "Price",
         // "file" => "File",
 
         "ar" => [
