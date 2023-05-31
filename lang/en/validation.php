@@ -200,6 +200,7 @@ return [
         "phone" => "Phone",
         "email" => "Email",
         "price" => "Price",
+        "whatsapp" => "WhatsApp",
         // "file" => "File",
 
         "ar" => [

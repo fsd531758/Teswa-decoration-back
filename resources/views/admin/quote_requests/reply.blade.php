@@ -1,18 +1,18 @@
 @extends('admin.layouts.master')
-@section('title', settings()->website_title . ' | ' . __('words.quote_request'))
+@section('title', settings()->website_title . ' | ' . __('words.reply_for_request'))
 @section('breadcrumb')
     <div class="d-flex align-items-baseline flex-wrap mr-5">
         <!--begin::Breadcrumb-->
-        <h5 class="text-dark font-weight-bold my-1 mr-5">{{ __('words.items') }}</h5>
+        <h5 class="text-dark font-weight-bold my-1 mr-5">{{ __('words.reply_for_request') }}</h5>
         <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
             <li class="breadcrumb-item">
                 <a href="{{ route('admin.home') }}" class="text-muted">{{ __('words.home') }}</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="{{ route('quote_requests.index') }}" class="text-muted">{{ __('words.show_items') }}</a>
+                <a href="{{ route('quote_requests.index') }}" class="text-muted">{{ __('words.reply_for_request') }}</a>
             </li>
             <li class="breadcrumb-item">
-                <span class="text-muted">{{ __('words.quote_request') }}</span>
+                <span class="text-muted">{{ __('words.reply_for_request') }}</span>
             </li>
         </ul>
         <!--end::Breadcrumb-->

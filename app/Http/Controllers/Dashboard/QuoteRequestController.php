@@ -35,6 +35,9 @@ class QuoteRequestController extends Controller
 
     public function show(Quote $quote_request)
     {
+        // $file = $quote_request->file()->where('type', '=', 'file')->first();
+        return $quote_request;
+
         return view('admin.quote_requests.show', compact('quote_request'));
     }
 

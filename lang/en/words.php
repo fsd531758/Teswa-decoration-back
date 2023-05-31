@@ -249,7 +249,11 @@ return [
     "download" => "Click here to download",
     "breadcrumb" => "Breadcrumb image",
     "contact_requests" => "Contact Us Requests",
-    'show_contact_requests' => 'Contact US Requests',
+    'show_contact_requests' => 'Contact Us Requests',
+    'show_quote_requests' => 'Quotation Requests',
+
+    'reply_for_msg' => 'Reply For Contact Message',
+    'reply_for_request' => 'Reply For Quotation Request Message',
 
     'reply' => 'Reply',
     'reply_msg' => 'Reply For Your Message',

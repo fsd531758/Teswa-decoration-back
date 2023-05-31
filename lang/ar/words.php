@@ -250,6 +250,11 @@ return [
     "breadcrumb" => "صورة مسار التنقل",
     "contact_requests" => "طلبات تواصل معنا",
     'show_contact_requests' => 'رسائل طلبات التواصل',
+    'show_quote_requests' => 'رسائل طلبات عرض السعر',
+
+    'reply_for_msg' => 'رد على رسالة تواصل',
+    'reply_for_request' => 'رد على رسالة طلب عرض سعر',
+
 
     'reply' => 'رد',
     'reply_msg' => 'رد على رسالتك',

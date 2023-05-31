@@ -91,6 +91,40 @@
                         </div>
                     </div>
                 </div>
+
+                <br>
+                <br>
+                {{-- <div class="row"> --}}
+                    {{-- files start --}}
+                    {{-- @if($files->isNotEmpty())
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card card-primary">
+                                        <div class="card-header bg-secondary py-1 m-0">
+                                            <h4 class="card-title">{{__('words.files')}}</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                @foreach($files as $file)
+                                                    <div class="col-sm-3 ">
+                                                        <a href="{{$file->path}}" target="_blank" download>
+                                                            <img class="index_image"
+                                                                 src="{{asset('uploads/pdf.png')}}" alt="file">
+                                                        </a>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif --}}
+                    {{-- files end --}}
+                {{-- </div> --}}
+
+                
             </div>
         </div>
     </div>
