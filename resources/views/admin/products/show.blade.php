@@ -98,7 +98,7 @@
                     <div class="col-md-3">
                         <div class="mb-7 bg-light p-5 rounded h-100">
                             <div class="card-title">
-                                <h5 class="font-weight-bolder text-dark">{{ __('words.activity') }}:</h5>
+                                <h5 class="font-weight-bolder text-dark">{{ __('words.is_trending') }}:</h5>
                             </div>
                             <p class="m-0"><span
                                     class="badge rounded-pill text-white {{ $product->is_trending == 1 ? 'bg-warning' : 'bg-danger' }}">{{ $product->getIsTrending() }}</span>

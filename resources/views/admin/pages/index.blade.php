@@ -90,7 +90,7 @@
                         </td>
                         <td>{{ $page->title }}</td>
                         <td>{{ $page->sub_title }}</td>
-                        <td>{!! $page->description !!}</td>
+                        <td>{!! Str::limit($page->description , 50 ) !!}</td>
                         {{--                        <td>{{$page->identifier}}</td> --}}
                         <td>{{ formatDate($page->created_at) }}</td>
                         <td>{{ formatDate($page->created_at) == formatDate($page->updated_at) ? '--' : formatDate($page->updated_at) }}

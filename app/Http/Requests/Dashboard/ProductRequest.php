@@ -23,7 +23,8 @@ class ProductRequest extends FormRequest
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string',Rule::unique('product_translations','title')->ignore($this->id, 'product_id')]];
-            $rules += [$locale . '.description' => ['nullable', 'string']];
+            $rules += [$locale . '.short_description' => ['required', 'string']];
+            $rules += [$locale . '.description' => ['required', 'string']];
         }
 
         return $rules;

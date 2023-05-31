@@ -190,7 +190,7 @@ class PageSeeder extends Seeder
             "en" => [
                 "title" => "Get Quotation",
                 "sub_title" => "Request A Quote",
-                "description" => "<p>Fill the form and we will reply with a custom quote for yoyr needs</p>",
+                "description" => "<p>Fill the form and we will reply with a custom quote for your needs</p>",
             ],
         ]);
 

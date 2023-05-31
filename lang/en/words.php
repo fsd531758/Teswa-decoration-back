@@ -264,6 +264,8 @@ return [
     'quote_request_reply'   => 'Reply To Quotation Request Sent Successfully',
     'quote_requests'        => 'Quotation Requests',
     'reply_request_content'        => 'Reply For Your Quotation Request',
+    "short_description" => "Short Description",
+
 
 
     "ar" => [

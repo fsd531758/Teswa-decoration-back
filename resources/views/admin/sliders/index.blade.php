@@ -89,7 +89,7 @@
                             @endif
                         </td>
                         <td>{{ $slider->title }}</td>
-                        <td>{!! $slider->description !!}</td>
+                        <td>{!!Str::limit( $slider->description , 50 )  !!}</td>
                         <td><span
                                 class="badge rounded-pill text-white {{$slider->status == 1 ? 'bg-success' : 'bg-danger'}}">{{ $slider->getActive() }}</span>
                         </td>

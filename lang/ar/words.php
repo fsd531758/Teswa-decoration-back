@@ -265,6 +265,8 @@ return [
     'quote_request_reply' => 'تم الرد على الطلب بنجاح',
     'quote_requests' => 'طلبات عرض السعر',
     'reply_request_content' => 'رد على طلبك',
+    "short_description" => "الوصف المختصر",
+
 
 
     "ar" => [

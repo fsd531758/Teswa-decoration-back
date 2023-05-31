@@ -70,7 +70,7 @@
                             <td>{{ $key + 1 }}</td>
                             
                             <td>{{ $service->title }}</td>
-                            <td>{!! $service->description !!}</td>
+                            <td>{!! Str::limit($service->description , 50 ) !!}</td>
                             <td><span
                                     class="badge rounded-pill text-white {{ $service->status == 1 ? 'bg-success' : 'bg-danger' }}">{{ $service->getActive() }}</span>
                             </td>

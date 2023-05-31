@@ -8,7 +8,7 @@ return [
         "sections" => ["read", "create", "update", "delete"],
         "products" => ["read", "create", "update", "delete"],
         "services" => ["read", "create", "update", "delete"],
-        "experiences" => ["read", "create", "update", "delete"],
+        "experiences" => ["read", "update"],
         "partners" => ["read", "create", "update", "delete"],
         "pages" => ["read", "update"],
         "contacts" => ["read", "create", "update", "delete"],

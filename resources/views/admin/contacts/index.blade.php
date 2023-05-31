@@ -69,7 +69,7 @@
                     <tr>
 
                         <td>{{ $key + 1 }}</td>
-                        <td dir="ltr" style="text-align: match-parent;">{{ $contact->contact }}</td>
+                        <td dir="ltr" style="text-align: match-parent;">{{ Str::limit($contact->contact , 50 ) }}</td>
                         <td><span
                                 class="badge
                                 @if ($contact->type === 'telephone') badge-success
