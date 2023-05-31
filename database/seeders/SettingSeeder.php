@@ -20,7 +20,7 @@ class SettingSeeder extends Seeder
                 'meta_title'            => 'فن المعمار للديكور',
                 'meta_description'      => 'فن المعمار للديكور',
                 'meta_keywords'         => 'فن المعمار للديكور',
-                'footer_description'    => '<p>فن المعمار للديكور</p>',
+                'footer_description'    => '<p>فن المعمار للديكور اكبر وكيل و موزع لمنتجات الديكور الداخلي و الخارجي , نلبي جميع المتطلبات من ارضيات الباركيه و ورق الجدران و التكسيات الداخليه و اطارات الفايبر و الصفائح الحجريه و بديل الرخام و الابواب</p>',
             ],
             'en' => [
                 'website_title'         => 'Fan Al Meamar For Decoration',
@@ -29,7 +29,7 @@ class SettingSeeder extends Seeder
                 'meta_title'            => 'Fan Al Meamar For Decoration',
                 'meta_description'      => 'Fan Al Meamar For Decoration',
                 'meta_keywords'         => 'Fan Al Meamar For Decoration',
-                'footer_description'    => '<p>Fan Al Meamar For Decoration</p>',
+                'footer_description'    => '<p>Fan Al Meamar For Decoration The largest agent and distributor of interior and exterior decoration, wallpaper, interior cladding, fiber frames, stone plates, marble and doors</p>',
             ],
             // 'contact_email' => 'mohamed@app.com',
             // 'newsletter_email' => 'mohamed@app.com',

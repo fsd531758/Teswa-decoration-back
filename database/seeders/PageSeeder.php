@@ -177,14 +177,14 @@ class PageSeeder extends Seeder
         //message
         $page = Page::create([
             "identifier" => "quotation",
-            "has_sub_title" => 1,
+            "has_sub_title" => 0,
             "has_description" => 1,
             "has_link" => 0,
             "has_video" => 0,
             "has_image" => 1,
             "ar" => [
                 "title" => "طلب عرض سعر",
-                "sub_title" => "اطلب عرض سعر",
+                // "sub_title" => "اطلب عرض سعر",
                 "description" => "<p>إملأ النموذج وسنقوم بالرد مع عرض أسعار مخصص لاحتياجاتك</p>",
             ],
             "en" => [

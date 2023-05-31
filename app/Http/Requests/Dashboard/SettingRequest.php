@@ -20,8 +20,8 @@ class SettingRequest extends FormRequest
             'white_logo' => 'required_without:id|max:900|image',
             'favicon' => 'required_without:id|max:900|image',
             'footer_img' => 'required_without:id|max:900|image',
-            'breadcrumb' => 'required_without:id|max:900|image',
-            'whatsapp'         => 'required|string|regex:/^([0-9\s\-\+\(\)]*)$/|min:6|max:30',
+            'breadcrumb'    => 'required_without:id|max:900|image',
+            'whatsapp'      => 'required|string|regex:/^([0-9\s\-\+\(\)]*)$/|min:6|max:30',
             'email' => 'nullable|email|unique:admins,email,'.$this->id,
 
         ];
