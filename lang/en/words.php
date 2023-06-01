@@ -265,6 +265,7 @@ return [
     'quote_requests'        => 'Quotation Requests',
     'reply_request_content'        => 'Reply For Your Quotation Request',
     "short_description" => "Short Description",
+    "sar" => "SAR",
 
 
 

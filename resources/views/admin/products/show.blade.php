@@ -120,7 +120,7 @@
                             <div class="card-title">
                                 <h5 class="font-weight-bolder text-dark">{{ __('words.price') }}:</h5>
                             </div>
-                            <p class="m-0">{{ $product->price }}</p>
+                            <p class="m-0">{{ $product->price }} @lang('words.sar')</p>
                         </div>
                     </div>
                 </div>

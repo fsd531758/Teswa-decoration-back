@@ -266,6 +266,7 @@ return [
     'quote_requests' => 'طلبات عرض السعر',
     'reply_request_content' => 'رد على طلبك',
     "short_description" => "الوصف المختصر",
+    "sar" => "ريال سعودى",
 
 
 
