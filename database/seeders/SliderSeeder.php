@@ -15,14 +15,14 @@ class SliderSeeder extends Seeder
         $slider = Slider::create([
             "status" => "1",
             "ar" => [
-                "title" => "المعمار للديكور",
-                "sub_title" => "جعل المنزل أكثر روعة",
+                "title" => "جعل المنزل أكثر روعة",
+                "sub_title" => "فن المعمار للديكور",
                 "description" => "<p>جميل وسلس وأنيق</p>",
             ],
 
             "en" => [
-                "title" => "Fan Al Meamar For Decoration",
-                "sub_title" => "BRING Magic TO HOME",
+                "title" => "BRING Magic TO HOME",
+                "sub_title" => "Fan Al Meamar For Decoration",
                 "description" => "<p>Beautiful , Smooth & Elegant</p>",
             ],
         ]);

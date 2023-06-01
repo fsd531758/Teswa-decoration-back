@@ -19,6 +19,7 @@ class SliderRequest extends FormRequest
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string', Rule::unique('slider_translations', 'title')->ignore($this->id, 'slider_id')]];
+            $rules += [$locale . '.sub_title' => ['required', 'string']];
             $rules += [$locale . '.description' => ['required', 'string']];
         }
 
