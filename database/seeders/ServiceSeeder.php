@@ -14,6 +14,7 @@ class ServiceSeeder extends Seeder
         //service 1
         Service::create([
             "status" => "1",
+            "icon" => "fas fa-chair",
             "ar" => [
                 "title" => "غرفة المعيشة",
                 "description" => "<p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. . </p>",
@@ -28,6 +29,7 @@ class ServiceSeeder extends Seeder
         //service 2
         Service::create([
             "status" => "1",
+            "icon" => "fas fa-cloud-sun",
             "ar" => [
                 "title" => "الأثاث الخارجى",
                 "description" => "<p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. . </p>",
@@ -42,6 +44,7 @@ class ServiceSeeder extends Seeder
         //service 3
         Service::create([
             "status" => "1",
+            "icon" => "fas fa-utensils",
             "ar" => [
                 "title" => "مناطق تناول الطعام",
                 "description" => "<p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. . </p>",
@@ -56,13 +59,14 @@ class ServiceSeeder extends Seeder
         //service 1
         Service::create([
             "status" => "1",
+            "icon" => "fas fa-mug-hot",
             "ar" => [
-                "title" => "غرفة المعيشة 1",
+                "title" => "مستلزمات المطابخ",
                 "description" => "<p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. . </p>",
             ],
 
             "en" => [
-                "title" => "Living Room 1",
+                "title" => "Kitchen Essentials",
                 "description" => "<p>Lorem ipsum dolor amet, consectetur adipiscing elit augue diam, accumsan ipsum dolor sit amet, consectetur adipiscing.</p>",
             ],
         ]);
@@ -70,13 +74,14 @@ class ServiceSeeder extends Seeder
         //service 2
         Service::create([
             "status" => "1",
+            "icon" => "fas fa-bed",
             "ar" => [
-                "title" => "الأثاث الخارجى 1",
+                "title" => "ديكورات غرف النوم",
                 "description" => "<p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. . </p>",
             ],
 
             "en" => [
-                "title" => "Outdoor Furniture 1",
+                "title" => "Bedroom Decorations",
                 "description" => "<p>Lorem ipsum dolor amet, consectetur adipiscing elit augue diam, accumsan ipsum dolor sit amet, consectetur adipiscing.</p>",
             ],
         ]);
@@ -84,13 +89,14 @@ class ServiceSeeder extends Seeder
         //service 3
         Service::create([
             "status" => "1",
+            "icon" => "fas fa-briefcase",
             "ar" => [
-                "title" => "مناطق تناول الطعام 1",
+                "title" => "ديكورات المكاتب",
                 "description" => "<p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. . </p>",
             ],
 
             "en" => [
-                "title" => "Dinning Areas 1",
+                "title" => "Office Decoration",
                 "description" => "<p>Lorem ipsum dolor amet, consectetur adipiscing elit augue diam, accumsan ipsum dolor sit amet, consectetur adipiscing.</p>",
             ],
         ]);

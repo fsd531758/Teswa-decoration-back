@@ -86,6 +86,14 @@
     <div class="card card-custom">
         <div class="card-body">
             <div class="form-group row">
+                @include('admin.components.icon', [
+                    'label' => __('words.icon'),
+                    'value' => old('icon', $service->icon),
+                    'required' => false,
+                ])
+            </div>
+            
+            <div class="form-group row">
                 @include('admin.components.switch', [
                     'label' => __('words.status'),
                     'name' => 'status',

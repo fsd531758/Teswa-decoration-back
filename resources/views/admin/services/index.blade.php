@@ -55,6 +55,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>{{ __('words.icon') }}</th>
                         <th>{{ __('words.title') }}</th>
                         <th>{{ __('words.description') }}</th>
                         <th>{{ __('words.status') }}</th>
@@ -68,9 +69,9 @@
                         <tr>
 
                             <td>{{ $key + 1 }}</td>
-                            
+                            <td><i id="IconPreview" style="font-size:40px" class="{{ $service->icon }}"></i></td>
                             <td>{{ $service->title }}</td>
-                            <td>{!! Str::limit($service->description , 50 ) !!}</td>
+                            <td>{!! Str::limit($service->description, 50) !!}</td>
                             <td><span
                                     class="badge rounded-pill text-white {{ $service->status == 1 ? 'bg-success' : 'bg-danger' }}">{{ $service->getActive() }}</span>
                             </td>

@@ -16,7 +16,7 @@ class ServiceRequest extends FormRequest
     {
         $rules = [
             // 'image' => 'required_without:id|max:900|image',
-            // 'icon' => 'nullable|string',
+            'icon' => 'required_without:id|string',
         ];
         foreach (config('translatable.locales') as $locale) {
             $rules += [$locale . '.title' => ['required', 'string', Rule::unique('service_translations', 'title')->ignore($this->id, 'service_id')]];

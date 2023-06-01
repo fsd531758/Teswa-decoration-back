@@ -35,15 +35,15 @@ class SliderSeeder extends Seeder
         $slider = Slider::create([
             "status" => "1",
             "ar" => [
-                "title" => "فن المعمار للديكور 1",
-                "sub_title" => "جعل المنزل أكثر روعة",
-                "description" => "<p>جميل وسلس وأنيق</p>",
+                "title" => "100+ علامة تجارية",
+                "sub_title" => "فن المعمار للديكور",
+                "description" => "<p>تشكيلة واسعة من ماركات التصميم الإيطالية والعالمية.</p>",
             ],
 
             "en" => [
-                "title" => "Fan Al Meamar For Decoration 1",
-                "sub_title" => "BRING Magic TO HOME",
-                "description" => "<p>Beautiful , Smooth & Elegant</p>",
+                "title" => "100+ BRANDS",
+                "sub_title" => "Fan Al Meamar For Decoration",
+                "description" => "<p>A wide selection of Italian and international design brands.</p>",
             ],
         ]);
         $slider->file()->create([
@@ -55,15 +55,15 @@ class SliderSeeder extends Seeder
         $slider = Slider::create([
             "status" => "1",
             "ar" => [
-                "title" => "فن المعمار للديكور 2",
-                "sub_title" => "جعل المنزل أكثر روعة",
-                "description" => "<p>جميل وسلس وأنيق</p>",
+                "title" => "أعد التفكير في مساحتك",
+                "sub_title" => "فن المعمار للديكور",
+                "description" => "<p>عصري أو كلاسيكي - لدينا كل ما تحتاجه!</p>",
             ],
 
             "en" => [
-                "title" => "Fan Al Meamar For Decoration 2",
-                "sub_title" => "BRING Magic TO HOME",
-                "description" => "<p>Beautiful , Smooth & Elegant</p>",
+                "title" => "Rethink Your Space",
+                "sub_title" => "Fan Al Meamar For Decoration",
+                "description" => "<p>Trendy or Classic - We Have Everything You Need!</p>",
             ],
         ]);
         $slider->file()->create([

@@ -103,6 +103,17 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-7 bg-light p-5 rounded h-100">
+                            <div class="card-title">
+                                <h5 class="font-weight-bolder text-dark">{{ __('words.icon') }}:</h5>
+                            </div>
+                            <i class="{{ $service->icon }} fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             @permission('update-services')
