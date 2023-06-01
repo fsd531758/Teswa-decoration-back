@@ -15,13 +15,6 @@ return [
         "settings" => ["read", "update"],
         "contact_requests" => ["read", "delete", "reply"],
         "quote_requests" => ["read", "delete", "reply"],
-        // "projects" => ["read", "create", "update", "delete"],
-        // "teams" => ["read", "create", "update", "delete"],
-        // "testimonials" => ["read", "create", "update", "delete"],
-        // "portfolios" => ["read", "create", "update", "delete"],
-        // "blog" => ["read", "create", "update", "delete"],
-        // "faqs" => ["read", "create", "update", "delete"],
-        // "courses" => ["read", "create", "export"],
         // "news_letters" => ["read", "show_subscribed_users", "delete_subscribed_users", "create", "resend", "delete"]
     ],
 ];

@@ -29,9 +29,6 @@ Route::group([
             Route::get('my-profile', 'AdminUserController@profile')->name('admin.profile');
             Route::put('my-profile/{id}/update', 'AdminUserController@updateProfile')->name('admin.profile.update');
 
-            //projects routes
-            //            Route::resource('projects', 'ProjectController');
-
             //slider routes
             Route::resource('sliders', 'SliderController');
 
@@ -50,33 +47,15 @@ Route::group([
             //product routes
             Route::resource('experiences', 'ExperienceController');
 
-            //product routes
-            Route::resource('projects', 'ProjectController');
-
-            //teams routes
-            Route::resource('teams', 'TeamController');
-
-            //testimonials routes
-            Route::resource('testimonials', 'TestimonialController');
-
             //partners routes
             Route::resource('partners', 'PartnerController');
-
-            //portfolios routes
-            Route::resource('portfolios', 'PortfolioController');
-
-            //blog routes
-            Route::resource('blog', 'BlogController');
-
-            //FAQ routes
-            Route::resource('faqs', 'FaqController');
 
             //pages routes
             Route::resource('pages', 'PageController');
 
             //contact routes
             Route::resource('contacts', 'SettingContactController');
-            
+
             //contact routes
             Route::resource('contact_requests', 'ContactRequestController');
             Route::get('contact_requests/{contact_request}/reply', [ContactRequestController::class, 'reply'])->name('contact_requests.reply');
@@ -94,13 +73,6 @@ Route::group([
 
             //setting routes
             Route::resource('settings', 'SettingController');
-
-            //course routes
-            Route::get('courses', 'CourseController@index')->name('courses.index');
-            Route::get('courses/{id}/show', 'CourseController@index')->name('courses.show');
-            Route::get('courses/create', 'CourseController@create')->name('courses.create');
-            Route::post('courses/import', 'CourseController@import')->name('courses.import');
-            Route::get('courses/export', 'CourseController@export')->name('courses.export');
         });
     });
 });
