@@ -75,15 +75,15 @@ class SliderSeeder extends Seeder
         $slider = Slider::create([
             "status" => "1",
             "ar" => [
-                "title" => "فن المعمار للديكور 3",
-                "sub_title" => "جعل المنزل أكثر روعة",
-                "description" => "<p>جميل وسلس وأنيق</p>",
+                "title" => "مجموعة واسعة من المنتجات",
+                "sub_title" => "فن المعمار للديكور",
+                "description" => "<p>تسوق منتجاتنا واختر العلامات التجارية التي تناسب احتياجاتك وتعكس أسلوبك بشكل أفضل.</p>",
             ],
 
             "en" => [
-                "title" => "Fan Al Meamar For Decoration 3",
-                "sub_title" => "BRING Magic TO HOME",
-                "description" => "<p>Beautiful , Smooth & Elegant</p>",
+                "title" => "A Wide Selection OF Products",
+                "sub_title" => "Fan Al Meamar For Decoration",
+                "description" => "<p>Shop our Products and choose the brands that better suit your needs and reflect your style.</p>",
             ],
         ]);
         $slider->file()->create([
