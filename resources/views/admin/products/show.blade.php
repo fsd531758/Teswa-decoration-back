@@ -138,6 +138,10 @@
                                 @foreach ($product->colors as $color)
                                     <ul>
                                         <li>
+                                            <div class="d-flex justify-content-center rounded text-center"
+                                                style="background-color: {{ $color->hex }} ; min-height:30px;width:30px">
+                                                {{-- {{ $color->title }} --}}
+                                            </div>
                                             {!! $color->title !!}
                                         </li>
                                     </ul>

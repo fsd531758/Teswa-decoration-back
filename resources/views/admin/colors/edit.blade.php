@@ -66,17 +66,7 @@
                             </div>
                         </div>
 
-                        <div class="col form-group">
-                            <label>{{ __('words.description') }}({{ __('words.locale-' . $locale) }})<span
-                                    class="text-danger">*</span></label>
-                            <textarea class="form-control ckeditor @error($locale . '.description') is-invalid @enderror " type="text"
-                                name="{{ $locale . '[description]' }}" rows="4">{{ old($locale . '.description', $color->translate($locale)->description) }} </textarea>
-                            @error($locale . '[description]')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
+
                     </div>
                 @endforeach
             </div>
