@@ -58,7 +58,7 @@ class CategoryController extends Controller
 
             return redirect()->route('categories.index')->with(['success' => __('message.created_successfully')]);
         } catch (\Exception $e) {
-            return redirect()->back()->with(['error' => $e->getMessage()]);
+            return redirect()->back()->with(['error' =>  __('message.something_wrong')]);
         }
     }
 
@@ -67,7 +67,7 @@ class CategoryController extends Controller
         try {
             return view('admin.categories.show', compact('category'));
         } catch (\Exception $e) {
-            return redirect()->back()->with(['error' => $e->getMessage()]);
+            return redirect()->back()->with(['error' =>  __('message.something_wrong')]);
         }
     }
 

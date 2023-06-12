@@ -13,7 +13,7 @@ class QuoteRequestController extends Controller
 {
     public function quote_request(QuoteRequest $request)
     {
-//return $request;
+        //return $request;
         try {
             $quote_request = Quote::create($request->except('file'));
             $quote_request->uploadFile();
@@ -27,7 +27,7 @@ class QuoteRequestController extends Controller
         } catch (\Exception $e) {
             return failureResponse(
                 [],
-                $e->getMessage(),
+                trans("message.something_wrong"),
                 400
             );
         }

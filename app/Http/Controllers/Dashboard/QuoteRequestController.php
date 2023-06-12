@@ -37,7 +37,7 @@ class QuoteRequestController extends Controller
     {
         $file = $quote_request->file()->where('type', '=', 'file')->first();
 
-        return view('admin.quote_requests.show', compact('quote_request' , 'file'));
+        return view('admin.quote_requests.show', compact('quote_request', 'file'));
     }
 
 
@@ -68,7 +68,7 @@ class QuoteRequestController extends Controller
             Mail::to($contact->email)->send(new QuoteRequestReplyMail($quote_request_data));
             return redirect()->route('quote_requests.index')->with(['success' => __('words.quote_request_reply')]);
         } catch (\Exception $e) {
-            return redirect()->back()->with(['error' =>$e->getMessage()]);
+            return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
     }
 }
