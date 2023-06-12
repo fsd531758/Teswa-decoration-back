@@ -20,8 +20,9 @@ class SingleProductresource extends JsonResource
             'short_description'   => $this->short_description,
             'description'         => $this->description,
             'price'               => $this->price,
-            'images'              => ImageResource::collection($this->files) ,
+            'images'              => ImageResource::collection($this->files),
             'category'            => new CategoryResource($this->category),
+            'colors'              => ColorResource::collection($this->colors),
         ];
     }
 }

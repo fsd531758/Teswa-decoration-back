@@ -49,6 +49,9 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
+        $product->colors()->attach([1, 2, 3, 4, 5]);
+
+
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images[$i],
@@ -102,6 +105,8 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
+        $product->colors()->attach([1, 2, 3, 4, 8, 10, 12]);
+
         for ($i = 0; $i < 2; $i++) {
             $product->files()->create([
                 "path" => $images_2[$i],
@@ -148,6 +153,9 @@ class ProductSeeder extends Seeder
                                         </ul>",
             ],
         ]);
+
+        $product->colors()->attach([1, 2, 3, 4]);
+
 
         for ($i = 0; $i < 6; $i++) {
             $product->files()->create([
@@ -196,6 +204,9 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
+        $product->colors()->attach([8, 9, 10, 11, 12, 13]);
+
+
         for ($i = 0; $i < 5; $i++) {
             $product->files()->create([
                 "path" => $images_4[$i],
@@ -241,6 +252,9 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
+        $product->colors()->attach([1, 2, 14, 15]);
+
+
         for ($i = 0; $i < 3; $i++) {
             $product->files()->create([
                 "path" => $images_5[$i],
@@ -280,6 +294,9 @@ class ProductSeeder extends Seeder
                                                 </ul>",
             ],
         ]);
+
+        $product->colors()->attach([1, 2, 3, 12, 13]);
+
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -324,6 +341,9 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
+        $product->colors()->attach([6, 7, 8, 15, 14]);
+
+
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_7[$i],
@@ -366,6 +386,9 @@ class ProductSeeder extends Seeder
                 </ul>",
             ],
         ]);
+
+        $product->colors()->attach([1, 2, 7, 8, 9, 13]);
+
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -413,6 +436,8 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
+        $product->colors()->attach([1, 2, 3, 4, 5]);
+
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -461,6 +486,9 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
+        $product->colors()->attach([1, 2, 3, 4, 5, 6, 7]);
+
+
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_10[$i],
@@ -507,6 +535,8 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
+        $product->colors()->attach([12, 13, 14, 15]);
+
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -554,6 +584,8 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
+        $product->colors()->attach([7, 8]);
+
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -597,6 +629,8 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
+        $product->colors()->attach([1, 2]);
+
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -640,6 +674,8 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
+        $product->colors()->attach([3, 4, 5]);
+
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -684,6 +720,8 @@ class ProductSeeder extends Seeder
 
             ],
         ]);
+        $product->colors()->attach([5, 6, 10, 15, 14, 13]);
+
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -728,7 +766,10 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        for ($i = 0; $i < 4; $i++){
+        $product->colors()->attach([9, 10, 11, 12, 13]);
+
+
+        for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_16[$i],
                 "type" => "image",
@@ -769,7 +810,10 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        for ($i = 0; $i < 4; $i++){
+        $product->colors()->attach([1, 2, 3, 11, 12, 13]);
+
+
+        for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_17[$i],
                 "type" => "image",
@@ -809,8 +853,10 @@ class ProductSeeder extends Seeder
                                             </ul>",
             ],
         ]);
+        $product->colors()->attach([1, 2, 3, 4, 5, 6]);
 
-        for ($i = 0; $i < 4; $i++){
+
+        for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_18[$i],
                 "type" => "image",
@@ -851,7 +897,10 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        for ($i = 0; $i < 4; $i++){
+        $product->colors()->attach([6, 7, 8, 9]);
+
+
+        for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_19[$i],
                 "type" => "image",
@@ -892,12 +941,13 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        for ($i = 0; $i < 4; $i++){
+        $product->colors()->attach([1, 2, 3, 4, 5, 6, 7, 8]);
+
+        for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_20[$i],
                 "type" => "image",
             ]);
         }
-
     }
 }
