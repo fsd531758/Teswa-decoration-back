@@ -135,18 +135,18 @@
                                     <h5 class="font-weight-bolder text-dark">{{ __('words.colors') }}:</h5>
                                 </div>
 
-                                @foreach ($product->colors as $color)
-                                    <ul>
-                                        <li>
+                                <div class='row g-4'>
+                                    @foreach ($product->colors as $color)
+                                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mt-4">
                                             <div class="d-flex justify-content-center rounded text-center"
                                                 style="background-color: {{ $color->hex }} ; min-height:30px;width:30px">
                                                 {{-- {{ $color->title }} --}}
                                             </div>
                                             {!! $color->title !!}
-                                        </li>
-                                    </ul>
-                                    {{-- <p class="m-0">{!! $specification->description !!}</p> --}}
-                                @endforeach
+                                        </div>
+                                        {{-- <p class="m-0">{!! $specification->description !!}</p> --}}
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
                     </div>
