@@ -238,7 +238,7 @@
                     <li class="menu-item menu-item-submenu {{ request()->routeIs('colors.*') ? 'menu-item-open menu-item-here' : '' }}"
                         aria-haspopup="true" data-menu-toggle="hover">
                         <a href="javascript:;" class="menu-link menu-toggle">
-                            <i class="fas fa-chair svg-icon menu-icon"></i>
+                            <i class="fas fa-palette svg-icon menu-icon"></i>
                             <span class="menu-text">{{ __('words.colors') }}</span>
                             <i class="menu-arrow"></i>
                         </a>
