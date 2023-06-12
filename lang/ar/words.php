@@ -173,6 +173,7 @@ return [
     "create_product" => "إنشاء منتج",
 
     "choose_color" => "إختار لون",
+    "choose_colors" => "إختار الألوان",
     "color" => "الالوان",
     "colors" => "الالوان",
     "show_colors" => "عرض الالوان",

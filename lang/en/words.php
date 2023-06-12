@@ -173,6 +173,7 @@ return [
     "create_product" => "Create Product",
 
     "choose_color" => "Choose Color",
+    "choose_colors" => "Choose Colors",
     "color" => "Color",
     "colors" => "Colors",
     "show_colors" => "Show Colors",

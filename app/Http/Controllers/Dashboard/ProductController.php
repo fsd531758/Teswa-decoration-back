@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\ProductRequest;
 use App\Models\Category;
+use App\Models\Color;
 use App\Models\Product;
 use App\Models\Project;
 use Illuminate\Http\Request;
@@ -14,8 +15,9 @@ class ProductController extends Controller
 {
     private $product;
     private $category;
+    private $color;
 
-    public function __construct(Product $product, Category $category)
+    public function __construct(Product $product, Category $category, Color $color)
     {
         $this->middleware(['permission:read-products'])->only('index', 'show');
         $this->middleware(['permission:create-products'])->only('create', 'store');
@@ -23,6 +25,7 @@ class ProductController extends Controller
         $this->middleware(['permission:delete-products'])->only('destroy');
         $this->product = $product;
         $this->category = $category;
+        $this->color = $color;
     }
 
     public function index()
@@ -39,7 +42,9 @@ class ProductController extends Controller
     {
         try {
             $categories = $this->category->active()->latest('id')->get();
-            return view('admin.products.create', compact('categories'));
+            $colors = $this->color->active()->latest('id')->get();
+
+            return view('admin.products.create', compact('categories', 'colors'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
@@ -58,8 +63,16 @@ class ProductController extends Controller
             else
                 $request->request->add(['is_trending' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove','images']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'images', 'colors']);
             $product = $this->product->create($requested_data);
+
+            //colors
+            if ($request->has('colors')) {
+                $colors = array_map(function ($value) {
+                    return intval(($value));
+                }, $request->colors);
+                $product->colors()->attach($colors);
+            }
             // $product->uploadFile();
             $product->uploadFiles();
 
@@ -73,7 +86,9 @@ class ProductController extends Controller
     {
         try {
             $images = $product->files()->where('type', '!=', 'cover')->get();
-            return view('admin.products.show', compact('product', 'images'));
+            $colors = $this->color->active()->latest('id')->get();
+
+            return view('admin.products.show', compact('product', 'images', 'colors'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
@@ -84,7 +99,10 @@ class ProductController extends Controller
         try {
             $images = $product->files()->where('type', '!=', 'cover')->get();
             $categories = $this->category->latest('id')->get();
-            return view('admin.products.edit', compact('product', 'images', 'categories'));
+
+            $all_colors = $this->color->active()->get();
+            $colors = $product->colors->pluck('id');
+            return view('admin.products.edit', compact('product', 'images', 'categories', 'all_colors', 'colors'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
@@ -103,9 +121,21 @@ class ProductController extends Controller
             else
                 $request->request->add(['is_trending' => 1]);
 
-            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'images', 'deleted_files']);
+            $requested_data = $request->except(['_token', 'profile_avatar_remove', 'images', 'deleted_files', 'colors']);
             $requested_data['updated_at'] = Carbon::now();
             $product->update($requested_data);
+
+            //edit colors
+            $product->colors()->detach();
+
+            if ($request->has('colors')) {
+                $colors = array_map(function ($value) {
+                    return intval(($value));
+                }, $request->colors);
+                $product->colors()->attach($colors);
+            }
+            //end colors edit
+
 
             // $product->updateFile();
             $product->updateFiles();

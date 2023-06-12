@@ -122,7 +122,24 @@
                     'multi' => 'multiple',
                     'accept' => 'image/*',
                 ])
+
             </div>
+
+            {{-- select multi color --}}
+            <div class="form-group row">
+                <label class="col-form-label col-12">{{ __('words.choose_colors') }}</label>
+                <div class="col-12">
+                    <select class="form-control selectpicker" id="multiSelect1" multiple="multiple" data-live-search="true"
+                        name="colors[]">
+                        @foreach ($colors as $color)
+                            <option value="{{ $color->id }}"
+                                {{ collect(old('colors'))->contains($color->id) ? 'selected' : '' }}>
+                                {!! $color->title !!}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            {{-- select multi color --}}
 
             <div class="form-group row">
                 <div class="form-group col-6">
@@ -144,19 +161,19 @@
             </div>
 
             <div class="form-group row">
-                    @include('admin.components.switch', [
-                        'label' => __('words.status'),
-                        'name' => 'status',
-                        'val' => old('status'),
-                        'required' => false,
-                    ])
-    
-                    @include('admin.components.switch', [
-                        'label' => __('words.is_trending'),
-                        'name' => 'is_trending',
-                        'val' => old('is_trending'),
-                        'required' => false,
-                    ])
+                @include('admin.components.switch', [
+                    'label' => __('words.status'),
+                    'name' => 'status',
+                    'val' => old('status'),
+                    'required' => false,
+                ])
+
+                @include('admin.components.switch', [
+                    'label' => __('words.is_trending'),
+                    'name' => 'is_trending',
+                    'val' => old('is_trending'),
+                    'required' => false,
+                ])
             </div>
 
         </div>

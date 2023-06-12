@@ -94,7 +94,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-3">
                         <div class="mb-7 bg-light p-5 rounded h-100">
                             <div class="card-title">
@@ -114,7 +114,7 @@
                             <p class="m-0">{{ $product->category ? $product->category->title : '' }}</p>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-3">
                         <div class="mb-7 bg-light p-5 rounded h-100">
                             <div class="card-title">
@@ -125,6 +125,28 @@
                     </div>
                 </div>
                 <br>
+
+                {{-- colors --}}
+                @if ($product->colors->isNotEmpty())
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="mb-7 bg-light p-5 rounded h-100">
+                                <div class="card-title">
+                                    <h5 class="font-weight-bolder text-dark">{{ __('words.colors') }}:</h5>
+                                </div>
+
+                                @foreach ($product->colors as $color)
+                                    <ul>
+                                        <li>
+                                            {!! $color->title !!}
+                                        </li>
+                                    </ul>
+                                    {{-- <p class="m-0">{!! $specification->description !!}</p> --}}
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                @endif
                 {{-- <br>
                 <div class="row">
                     <div class="col-md-4">
@@ -157,8 +179,8 @@
                                                 @foreach ($images as $file)
                                                     <div class="col-sm-3 ">
                                                         <a href="{{ $file->path }}" target="_blank">
-                                                            <img class="img-fluid mb-2 image-galley" src="{{ $file->path}}"
-                                                                alt="product image">
+                                                            <img class="img-fluid mb-2 image-galley"
+                                                                src="{{ $file->path }}" alt="product image">
                                                         </a>
                                                     </div>
                                                 @endforeach
@@ -171,6 +193,8 @@
                     @endif
                     {{-- files end --}}
                 </div>
+
+
             </div>
 
             @permission('update-products')

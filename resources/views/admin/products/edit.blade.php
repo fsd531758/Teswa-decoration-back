@@ -206,7 +206,7 @@
                     'val' => old('status', $product->status),
                     'required' => false,
                 ])
-                
+
                 @include('admin.components.switch', [
                     'label' => __('words.is_trending'),
                     'name' => 'is_trending',
@@ -214,6 +214,21 @@
                     'required' => false,
                 ])
             </div>
+            {{-- colors --}}
+            <div class="form-group row">
+                <label class="col-form-label col-12">{{ __('words.choose_colors') }}</label>
+                <div class="col-12">
+                    <select class="form-control w-100 selectpicker" id="multiSelect1" multiple="multiple"
+                        data-live-search="true" name="colors[]">
+                        @foreach ($all_colors as $color)
+                            <option value="{{ $color->id }}"
+                                {{ collect(old('colors', $colors))->contains($color->id) ? 'selected' : '' }}>
+                                {!! $color->title !!}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            {{-- colors --}}
         </div>
     </div>
 
