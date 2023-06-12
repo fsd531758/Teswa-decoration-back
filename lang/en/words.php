@@ -138,7 +138,7 @@ return [
     "show_experience"    => "Show Experience",
     "edit_experience"    => "Edit Experience",
     "create_experience"  => "Create Experience",
-    
+
     "teams" => "Teams",
     "show_teams" => "Show Team",
     "show_team" => "Show Team member",
@@ -158,7 +158,7 @@ return [
     "edit_category" => "Edit Category",
     "create_category" => "Create Category",
 
-    
+
     "sections" => "Sections",
     "section" => "Section",
     "show_sections" => "Show Sections",
@@ -171,6 +171,14 @@ return [
     "show_product" => "Show Product",
     "edit_product" => "Edit Product",
     "create_product" => "Create Product",
+
+    "choose_color" => "Choose Color",
+    "color" => "Color",
+    "colors" => "Colors",
+    "show_colors" => "Show Colors",
+    "show_color" => "Show Color",
+    "edit_color" => "Edit Color",
+    "create_color" => "Create Color",
 
     "services" => "Services",
     "show_services" => "Show Services",

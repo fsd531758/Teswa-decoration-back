@@ -172,6 +172,14 @@ return [
     "edit_product" => "تعديل المنتج",
     "create_product" => "إنشاء منتج",
 
+    "choose_color" => "إختار لون",
+    "color" => "الالوان",
+    "colors" => "الالوان",
+    "show_colors" => "عرض الالوان",
+    "show_color" => "عرض اللون",
+    "edit_color" => "تعديل اللون",
+    "create_color" => "إنشاء لون",
+
     "services" => "الخدمات",
     "show_services" => "عرض الخدمات",
     "show_service" => "عرض الخدمة",

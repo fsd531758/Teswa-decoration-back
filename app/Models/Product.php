@@ -18,13 +18,19 @@ class Product extends Model
 
     protected $appends = ['image'];
 
-    public $translatedAttributes = ['title', 'short_description' , 'description'];
+    public $translatedAttributes = ['title', 'short_description', 'description'];
 
     public $timestamps = true;
 
     // relations start
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
+    }
+
+    public function colors()
+    {
+        return $this->belongsToMany(Color::class , 'color_product');
     }
     // relations end
 
@@ -51,7 +57,7 @@ class Product extends Model
     {
         return $this->status == 1 ? __('words.active') : __('words.inactive');
     }
-    
+
     public function getIsTrending()
     {
         return $this->is_trending == 1 ? __('words.active') : __('words.inactive');

@@ -41,6 +41,9 @@ Route::group([
             //product routes
             Route::resource('products', 'ProductController');
 
+            //colors routes
+            Route::resource('colors', 'ColorController');
+
             //product routes
             Route::resource('services', 'ServiceController');
 

@@ -7,6 +7,7 @@ return [
         "categories" => ["read", "create", "update", "delete"],
         "sections" => ["read", "create", "update", "delete"],
         "products" => ["read", "create", "update", "delete"],
+        "colors" => ["read", "create", "update", "delete"],
         "services" => ["read", "create", "update", "delete"],
         "experiences" => ["read", "update"],
         "partners" => ["read", "create", "update", "delete"],

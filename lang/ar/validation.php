@@ -16,21 +16,21 @@ return [
     "active_url" => "حقل :attribute لا يُمثّل رابطًا صحيحًا.",
     "after" => "يجب على حقل :attribute أن يكون تاريخًا لاحقًا للتاريخ :date.",
     "after_or_equal" =>
-        "حقل :attribute يجب أن يكون تاريخاً لاحقاً أو مطابقاً للتاريخ :date.",
+    "حقل :attribute يجب أن يكون تاريخاً لاحقاً أو مطابقاً للتاريخ :date.",
     "alpha" => "يجب أن لا يحتوي حقل :attribute سوى على حروف.",
     "alpha_dash" =>
-        "يجب أن لا يحتوي حقل :attribute سوى على حروف، أرقام ومطّات.",
+    "يجب أن لا يحتوي حقل :attribute سوى على حروف، أرقام ومطّات.",
     "alpha_num" => "يجب أن يحتوي حقل :attribute على حروفٍ وأرقامٍ فقط.",
     "array" => "يجب أن يكون حقل :attribute ًمصفوفة.",
     "attached" => "حقل :attribute تم إرفاقه بالفعل.",
     "before" => "يجب على حقل :attribute أن يكون تاريخًا سابقًا للتاريخ :date.",
     "before_or_equal" =>
-        "حقل :attribute يجب أن يكون تاريخا سابقا أو مطابقا للتاريخ :date.",
+    "حقل :attribute يجب أن يكون تاريخا سابقا أو مطابقا للتاريخ :date.",
     "between" => [
         "array" =>
-            "يجب أن يحتوي حقل :attribute على عدد من العناصر بين :min و :max.",
+        "يجب أن يحتوي حقل :attribute على عدد من العناصر بين :min و :max.",
         "file" =>
-            "يجب أن يكون حجم ملف حقل :attribute بين :min و :max كيلوبايت.",
+        "يجب أن يكون حجم ملف حقل :attribute بين :min و :max كيلوبايت.",
         "numeric" => "يجب أن تكون قيمة حقل :attribute بين :min و :max.",
         "string" => "يجب أن يكون عدد حروف نّص حقل :attribute بين :min و :max.",
     ],
@@ -43,7 +43,7 @@ return [
     "different" => "يجب أن يكون الحقلان :attribute و :other مُختلفين.",
     "digits" => "يجب أن يحتوي حقل :attribute على :digits رقمًا/أرقام.",
     "digits_between" =>
-        "يجب أن يحتوي حقل :attribute بين :min و :max رقمًا/أرقام .",
+    "يجب أن يحتوي حقل :attribute بين :min و :max رقمًا/أرقام .",
     "dimensions" => "الحقل:attribute يحتوي على أبعاد صورة غير صالحة.",
     "distinct" => "للحقل :attribute قيمة مُكرّرة.",
     "email" => "يجب أن يكون حقل :attribute عنوان بريد إلكتروني صحيح البُنية.",
@@ -56,17 +56,17 @@ return [
         "file" => "يجب أن يكون حجم ملف حقل :attribute أكبر من :value كيلوبايت.",
         "numeric" => "يجب أن تكون قيمة حقل :attribute أكبر من :value.",
         "string" =>
-            "يجب أن يكون طول نّص حقل :attribute أكثر من :value حروفٍ/حرفًا.",
+        "يجب أن يكون طول نّص حقل :attribute أكثر من :value حروفٍ/حرفًا.",
     ],
     "gte" => [
         "array" =>
-            "يجب أن يحتوي حقل :attribute على الأقل على :value عُنصرًا/عناصر.",
+        "يجب أن يحتوي حقل :attribute على الأقل على :value عُنصرًا/عناصر.",
         "file" =>
-            "يجب أن يكون حجم ملف حقل :attribute على الأقل :value كيلوبايت.",
+        "يجب أن يكون حجم ملف حقل :attribute على الأقل :value كيلوبايت.",
         "numeric" =>
-            "يجب أن تكون قيمة حقل :attribute مساوية أو أكبر من :value.",
+        "يجب أن تكون قيمة حقل :attribute مساوية أو أكبر من :value.",
         "string" =>
-            "يجب أن يكون طول نص حقل :attribute على الأقل :value حروفٍ/حرفًا.",
+        "يجب أن يكون طول نص حقل :attribute على الأقل :value حروفٍ/حرفًا.",
     ],
     "image" => "يجب أن يكون حقل :attribute صورةً.",
     "in" => "حقل :attribute غير موجود.",
@@ -81,20 +81,20 @@ return [
         "file" => "يجب أن يكون حجم ملف حقل :attribute أصغر من :value كيلوبايت.",
         "numeric" => "يجب أن تكون قيمة حقل :attribute أصغر من :value.",
         "string" =>
-            "يجب أن يكون طول نّص حقل :attribute أقل من :value حروفٍ/حرفًا.",
+        "يجب أن يكون طول نّص حقل :attribute أقل من :value حروفٍ/حرفًا.",
     ],
     "lte" => [
         "array" =>
-            "يجب أن لا يحتوي حقل :attribute على أكثر من :value عناصر/عنصر.",
+        "يجب أن لا يحتوي حقل :attribute على أكثر من :value عناصر/عنصر.",
         "file" => "يجب أن لا يتجاوز حجم ملف حقل :attribute :value كيلوبايت.",
         "numeric" =>
-            "يجب أن تكون قيمة حقل :attribute مساوية أو أصغر من :value.",
+        "يجب أن تكون قيمة حقل :attribute مساوية أو أصغر من :value.",
         "string" =>
-            "يجب أن لا يتجاوز طول نّص حقل :attribute :value حروفٍ/حرفًا.",
+        "يجب أن لا يتجاوز طول نّص حقل :attribute :value حروفٍ/حرفًا.",
     ],
     "max" => [
         "array" =>
-            "يجب أن لا يحتوي حقل :attribute على أكثر من :max عناصر/عنصر.",
+        "يجب أن لا يحتوي حقل :attribute على أكثر من :max عناصر/عنصر.",
         "file" => "يجب أن لا يتجاوز حجم ملف حقل :attribute :max كيلوبايت.",
         "numeric" => "يجب أن تكون قيمة حقل :attribute مساوية أو أصغر من :max.",
         "string" => "يجب أن لا يتجاوز طول نّص حقل :attribute :max حروفٍ/حرفًا.",
@@ -103,11 +103,11 @@ return [
     "mimetypes" => "يجب أن يكون ملفًا من نوع : :values.",
     "min" => [
         "array" =>
-            "يجب أن يحتوي حقل :attribute على الأقل على :min عُنصرًا/عناصر.",
+        "يجب أن يحتوي حقل :attribute على الأقل على :min عُنصرًا/عناصر.",
         "file" => "يجب أن يكون حجم ملف حقل :attribute على الأقل :min كيلوبايت.",
         "numeric" => "يجب أن تكون قيمة حقل :attribute مساوية أو أكبر من :min.",
         "string" =>
-            "يجب أن يكون طول نص حقل :attribute على الأقل :min حروفٍ/حرفًا.",
+        "يجب أن يكون طول نص حقل :attribute على الأقل :min حروفٍ/حرفًا.",
     ],
     "multiple_of" => "حقل :attribute يجب أن يكون من مضاعفات :value",
     "not_in" => "عنصر الحقل :attribute غير صحيح.",
@@ -122,9 +122,9 @@ return [
     "relatable" => "حقل :attribute قد لا يكون مرتبطا بالمصدر المحدد.",
     "required" => "حقل :attribute مطلوب.",
     "required_if" =>
-        "حقل :attribute مطلوب في حال ما إذا كان :other يساوي :value.",
+    "حقل :attribute مطلوب في حال ما إذا كان :other يساوي :value.",
     "required_unless" =>
-        "حقل :attribute مطلوب في حال ما لم يكن :other يساوي :values.",
+    "حقل :attribute مطلوب في حال ما لم يكن :other يساوي :values.",
     "required_with" => "حقل :attribute مطلوب إذا توفّر :values.",
     "required_with_all" => "حقل :attribute مطلوب إذا توفّر :values.",
     "required_without" => "حقل :attribute مطلوب",
@@ -135,7 +135,7 @@ return [
         "file" => "يجب أن يكون حجم ملف حقل :attribute :size كيلوبايت.",
         "numeric" => "يجب أن تكون قيمة حقل :attribute مساوية لـ :size.",
         "string" =>
-            "يجب أن يحتوي نص حقل :attribute على :size حروفٍ/حرفًا بالضبط.",
+        "يجب أن يحتوي نص حقل :attribute على :size حروفٍ/حرفًا بالضبط.",
     ],
     "starts_with" => "يجب أن يبدأ حقل :attribute بأحد القيم التالية: :values",
     "string" => "يجب أن يكون حقل :attribute نصًا.",
@@ -143,7 +143,7 @@ return [
     "unique" => "قيمة حقل :attribute مُستخدمة من قبل.",
     "uploaded" => "فشل في تحميل الـ :attribute.",
     "url" =>
-        "صيغة رابط حقل :attribute غير صحيحة يجب أن اكون مثل https://www.domain.com",
+    "صيغة رابط حقل :attribute غير صحيحة يجب أن اكون مثل https://www.domain.com",
     "uuid" => "حقل :attribute يجب أن يكون بصيغة UUID سليمة.",
     "custom" => [
         "attribute-name" => [
@@ -184,6 +184,7 @@ return [
         "permissions" => "الصلحيات",
         "price" => "السعر",
         "whatsapp" => "واتس اب",
+        "hex" => "اللون",
         //        'en' => [
         //            'name' => 'الإسم باللغة الإنجليزية',
         //            'description' => 'الوصف باللغة الإنجليزية',
@@ -213,8 +214,8 @@ return [
         "identifier" => "المعرف",
         "contact" => "وسيلة الإتصال",
         "social" => "رابط موقع تواصل إجتماعى",
-        "link" =>"الرابط",
-        "video" =>"الفيديو",
+        "link" => "الرابط",
+        "video" => "الفيديو",
         "fname" => "الأسم الأول",
         "lname" => "إسم العائلة",
         "message" => "الرسالة",
