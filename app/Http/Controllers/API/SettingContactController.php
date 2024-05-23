@@ -5,9 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SettingContactResource;
 use App\Models\Contact;
-use Illuminate\Http\Request;
 use PHPUnit\Util\Exception;
-
 
 class SettingContactController extends Controller
 {

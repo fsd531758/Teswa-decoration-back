@@ -9,7 +9,6 @@ use App\Http\Controllers\API\QuoteRequestController;
 use App\Http\Controllers\API\SectionController;
 use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'APILocalization'], function () {
@@ -22,31 +21,30 @@ Route::group(['middleware' => 'APILocalization'], function () {
         Route::post('update-token', 'AuthController@updateToken');
 
         //home Route
-        Route::get('home'          , [HomeController::class          , 'index']);
+        Route::get('home', [HomeController::class, 'index']);
         //about Route
-        Route::get('about'         , [AboutController::class         , 'index']);
+        Route::get('about', [AboutController::class, 'index']);
         //sections Route
-        Route::get('sections'      , [SectionController::class       , 'index']);
+        Route::get('sections', [SectionController::class, 'index']);
         //categories Route
-        Route::get('categories'    , [CategoryController::class      , 'index']);
+        Route::get('categories', [CategoryController::class, 'index']);
         //categories Route
-        Route::get('categories/{id}'    , [CategoryController::class      , 'show_category']);
+        Route::get('categories/{id}', [CategoryController::class, 'show_category']);
         //products Route
-        Route::get('products'      , [ProductController::class       , 'index']);
+        Route::get('products', [ProductController::class, 'index']);
         //single_product Route
-        Route::get('products/{id}' , [ProductController::class       , 'show_product']);
+        Route::get('products/{id}', [ProductController::class, 'show_product']);
         //sections Route To get Single section and categories
-        Route::get('sections/{id}' , [SectionController::class       , 'show_section']);
+        Route::get('sections/{id}', [SectionController::class, 'show_section']);
         //contact us Route
-        Route::post('contact'       , [ContactUsController::class     , 'contact']);
+        Route::post('contact', [ContactUsController::class, 'contact']);
         //contact us Route
-        Route::post('request_quote'   , [QuoteRequestController::class     , 'quote_request']);
+        Route::post('request_quote', [QuoteRequestController::class, 'quote_request']);
         //Settings Route
-        Route::get('setting'       , [SettingController::class       , 'index']);
+        Route::get('setting', [SettingController::class, 'index']);
         //Setting contacts Route
-        Route::get('contacts'      , [SettingContactController::class, 'index']);
+        Route::get('contacts', [SettingContactController::class, 'index']);
     });
-
 
     // authenticated routes
     Route::group(['middleware' => ['jwt.verify:api']], function () {
