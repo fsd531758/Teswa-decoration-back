@@ -1,12 +1,10 @@
 <?php
 
 use App\Http\Controllers\API\AboutController;
-use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\ContactUsController;
 use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\QuoteRequestController;
-use App\Http\Controllers\API\SectionController;
 use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
 use Illuminate\Support\Facades\Route;
@@ -24,18 +22,8 @@ Route::group(['middleware' => 'APILocalization'], function () {
         Route::get('home', [HomeController::class, 'index']);
         //about Route
         Route::get('about', [AboutController::class, 'index']);
-        //sections Route
-        Route::get('sections', [SectionController::class, 'index']);
-        //categories Route
-        Route::get('categories', [CategoryController::class, 'index']);
-        //categories Route
-        Route::get('categories/{id}', [CategoryController::class, 'show_category']);
-        //products Route
-        Route::get('products', [ProductController::class, 'index']);
-        //single_product Route
-        Route::get('products/{id}', [ProductController::class, 'show_product']);
-        //sections Route To get Single section and categories
-        Route::get('sections/{id}', [SectionController::class, 'show_section']);
+        //our-business Route
+        Route::get('our-business', [ProductController::class, 'index']);
         //contact us Route
         Route::post('contact', [ContactUsController::class, 'contact']);
         //contact us Route

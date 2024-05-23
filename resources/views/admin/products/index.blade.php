@@ -89,8 +89,7 @@
                                 @endif
                             </td>
                             <td>{{ $product->title }}</td>
-                            <td>{{ $product->category ? $product->category->title : '' }}</td>
-                            <td>{!! Str::limit( $product->short_description, 50 ) !!}</td>
+                            <td>{!! Str::limit($product->short_description, 50) !!}</td>
                             <td><span
                                     class="badge rounded-pill text-white {{ $product->status == 1 ? 'bg-success' : 'bg-danger' }}">{{ $product->getActive() }}</span>
                             </td>

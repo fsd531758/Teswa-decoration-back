@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ColorTranslation extends Model
+class BusinessTranslation extends Model
 {
     use HasFactory;
 
-    protected $table = 'color_translations';
+    protected $table = 'business_translations';
 
     public $timestamps = false;
 

@@ -97,24 +97,7 @@
 
     <div class="card card-custom">
         <div class="card-body">
-            <div class="form-group row">
-                <div class="col-12 form-group">
-                    <label>{{ __('words.price') }}<span class="text-danger"> * </span></label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="flaticon-edit"></i></span>
-                        </div>
-                        <input type="number" name="{{ 'price' }}" placeholder="{{ __('words.price') }}"
-                            class="form-control  pl-5 min-h-40px @error('price') is-invalid @enderror"
-                            value="{{ old('price', $product->price) }}">
-                        @error('[price]')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                </div>
-                {{-- @include('admin.components.image', [
+            {{-- @include('admin.components.image', [
                     'label' => __('words.image'),
                     'value' => old('image', $product->image),
                     'name' => 'image',
@@ -123,113 +106,80 @@
                     'required' => false,
                 ]) --}}
 
-                @include('admin.components.files', [
-                    'label' => __('words.images'),
-                    'name' => 'images[]',
-                    'multi' => 'multiple',
-                    'accept' => 'image/*',
-                ])
-            </div>
+            @include('admin.components.files', [
+                'label' => __('words.images'),
+                'name' => 'images[]',
+                'multi' => 'multiple',
+                'accept' => 'image/*',
+            ])
+        </div>
 
-            @if ($images)
-                <div class="row">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card card-primary">
-                                    <div class="card-header bg-secondary py-1 m-0">
-                                        <h4 class="card-title">{{ __('words.images') }}</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            @foreach ($images as $file)
-                                                <div class="col-md-3">
-                                                    <div class="rounded border m-1">
-                                                        <div>
+        @if ($images)
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-primary">
+                                <div class="card-header bg-secondary py-1 m-0">
+                                    <h4 class="card-title">{{ __('words.images') }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        @foreach ($images as $file)
+                                            <div class="col-md-3">
+                                                <div class="rounded border m-1">
+                                                    <div>
 
-                                                            <img src="{{ $file->path }}"
-                                                                class="img-fluid mb-2 w-100 image-galley"
-                                                                alt="product image" />
+                                                        <img src="{{ $file->path }}"
+                                                            class="img-fluid mb-2 w-100 image-galley" alt="product image" />
 
-                                                        </div>
-                                                        <div class="form-check form-check-inline mx-2">
-                                                            <input
-                                                                class="form-check-input checkImage @error('checkImage') is-invalid @enderror"
-                                                                type="checkbox" id="image-{{ $file->id }}">
-                                                            <label class="form-check-label"
-                                                                for="image-{{ $file->id }}">{{ __('words.delete') }}</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mx-2">
+                                                        <input
+                                                            class="form-check-input checkImage @error('checkImage') is-invalid @enderror"
+                                                            type="checkbox" id="image-{{ $file->id }}">
+                                                        <label class="form-check-label"
+                                                            for="image-{{ $file->id }}">{{ __('words.delete') }}</label>
 
-                                                            @error('checkImage')
-                                                                <span class="invalid-feedback" role="alert">
-                                                                    <strong>{{ $message }}</strong>
-                                                                </span>
-                                                            @enderror
-                                                        </div>
+                                                        @error('checkImage')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
                                                     </div>
                                                 </div>
-                                            @endforeach
-                                            <div id="deleted_images"></div>
-                                        </div>
+                                            </div>
+                                        @endforeach
+                                        <div id="deleted_images"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            @endif
-
-            <br>
-            <br>
-            <div class="form-group row">
-                <div class="form-group col-6">
-                    <label for="exampleSelectd">{{ __('words.category') }}</label>
-                    <select class="form-control" id="exampleSelectd" name="category_id">
-                        <option value="">{{ __('words.choose') }}</option>
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->id }}"
-                                {{ old('category_id', $product->category_id) == $category->id ? 'selected' : '' }}>
-                                {{ $category->title }}</option>
-                        @endforeach
-                    </select>
-                    @error('category_id')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
             </div>
-            <div class="form-group row">
+        @endif
 
-                @include('admin.components.switch', [
-                    'label' => __('words.status'),
-                    'name' => 'status',
-                    'val' => old('status', $product->status),
-                    'required' => false,
-                ])
+        <br>
+        <br>
+        <div class="form-group row">
 
-                @include('admin.components.switch', [
-                    'label' => __('words.is_trending'),
-                    'name' => 'is_trending',
-                    'val' => old('is_trending', $product->is_trending),
-                    'required' => false,
-                ])
-            </div>
-            {{-- colors --}}
-            <div class="form-group row">
-                <label class="col-form-label col-12">{{ __('words.choose_colors') }}</label>
-                <div class="col-12">
-                    <select class="form-control w-100 selectpicker" id="multiSelect1" multiple="multiple"
-                        data-live-search="true" name="colors[]">
-                        @foreach ($all_colors as $color)
-                            <option value="{{ $color->id }}"
-                                {{ collect(old('colors', $colors))->contains($color->id) ? 'selected' : '' }}>
-                                {!! $color->title !!}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-            {{-- colors --}}
+            @include('admin.components.switch', [
+                'label' => __('words.status'),
+                'name' => 'status',
+                'val' => old('status', $product->status),
+                'required' => false,
+            ])
+
+            @include('admin.components.switch', [
+                'label' => __('words.is_trending'),
+                'name' => 'is_trending',
+                'val' => old('is_trending', $product->is_trending),
+                'required' => false,
+            ])
         </div>
+
+    </div>
     </div>
 
     <div class="card-footer">

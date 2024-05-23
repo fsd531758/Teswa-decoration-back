@@ -8,11 +8,11 @@ use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Business extends Model
 {
     use HasFactory, Translatable, HasFile, HasFiles;
 
-    protected $table = 'products';
+    protected $table = 'business';
 
     protected $guarded = [];
 
@@ -22,16 +22,6 @@ class Product extends Model
 
     public $timestamps = true;
 
-    // relations start
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
-
-    public function colors()
-    {
-        return $this->belongsToMany(Color::class , 'color_product');
-    }
     // relations end
 
     // Scopes start

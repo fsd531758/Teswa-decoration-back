@@ -86,13 +86,14 @@
     <div class="card card-custom">
         <div class="card-body">
             <div class="form-group row">
-                @include('admin.components.icon', [
-                    'label' => __('words.icon'),
-                    'value' => old('icon', 'fab fa-github'),
-                    'required' => false,
+                @include('admin.components.files', [
+                    'label' => __('words.images'),
+                    'name' => 'images[]',
+                    'multi' => 'multiple',
+                    'accept' => 'image/*',
                 ])
             </div>
-            
+
             <div class="form-group row">
                 @include('admin.components.switch', [
                     'label' => __('words.status'),

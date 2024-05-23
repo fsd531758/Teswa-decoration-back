@@ -11,57 +11,57 @@ class SettingSeeder extends Seeder
     {
         $setting = Setting::create([
             'map' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463877.31803441915!2d46.492192983072115!3d24.725453869058928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2seg!4v1683700196645!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
-                'whatsapp' => '+00966555',
-            
-                'ar' => [
-                'website_title'         => 'فن المعمار للديكور',
-                'address'               => 'الرياض المملكة العربية السعودية',
-                'copyrights'            => 'جميع الحقوق محفوظة لدى فن المعمار للديكور ©2023',
-                'meta_title'            => 'فن المعمار للديكور',
-                'meta_description'      => 'فن المعمار للديكور',
-                'meta_keywords'         => 'فن المعمار للديكور',
-                'footer_description'    => '<p>فن المعمار للديكور اكبر وكيل و موزع لمنتجات الديكور الداخلي و الخارجي , نلبي جميع المتطلبات من ارضيات الباركيه و ورق الجدران و التكسيات الداخليه و اطارات الفايبر و الصفائح الحجريه و بديل الرخام و الابواب</p>',
+            'whatsapp' => '+00966555',
+
+            'ar' => [
+                'website_title' => 'فن المعمار للديكور',
+                'address' => 'الرياض المملكة العربية السعودية',
+                'copyrights' => 'جميع الحقوق محفوظة لدى فن المعمار للديكور ©2023',
+                'meta_title' => 'فن المعمار للديكور',
+                'meta_description' => 'فن المعمار للديكور',
+                'meta_keywords' => 'فن المعمار للديكور',
+                'footer_description' => '<p>فن المعمار للديكور اكبر وكيل و موزع لمنتجات الديكور الداخلي و الخارجي , نلبي جميع المتطلبات من ارضيات الباركيه و ورق الجدران و التكسيات الداخليه و اطارات الفايبر و الصفائح الحجريه و بديل الرخام و الابواب</p>',
             ],
             'en' => [
-                'website_title'         => 'Fan Al Meamar For Decoration',
-                'address'               => 'Riyadh Saudi Arabia',
-                'copyrights'            => 'All rights reserved to Fan Al Meamar For Decoration © 2023',
-                'meta_title'            => 'Fan Al Meamar For Decoration',
-                'meta_description'      => 'Fan Al Meamar For Decoration',
-                'meta_keywords'         => 'Fan Al Meamar For Decoration',
-                'footer_description'    => '<p>Fan Al Meamar For Decoration The largest agent and distributor of interior and exterior decoration, wallpaper, interior cladding, fiber frames, stone plates, marble and doors</p>',
+                'website_title' => 'Fan Al Meamar For Decoration',
+                'address' => 'Riyadh Saudi Arabia',
+                'copyrights' => 'All rights reserved to Fan Al Meamar For Decoration © 2023',
+                'meta_title' => 'Fan Al Meamar For Decoration',
+                'meta_description' => 'Fan Al Meamar For Decoration',
+                'meta_keywords' => 'Fan Al Meamar For Decoration',
+                'footer_description' => '<p>Fan Al Meamar For Decoration The largest agent and distributor of interior and exterior decoration, wallpaper, interior cladding, fiber frames, stone plates, marble and doors</p>',
             ],
             // 'contact_email' => 'mohamed@app.com',
             // 'newsletter_email' => 'mohamed@app.com',
         ]);
         $setting->file()->create([
-            'path' => 'seeders/settings/logo.png',
-            'type' => 'logo'
+            'path' => 'seeders/settings/Logo.pn.png',
+            'type' => 'logo',
         ]);
 
         $setting->file()->create([
-            'path' => 'seeders/settings/white_logo.png',
-            'type' => 'white_logo'
+            'path' => 'seeders/settings/teswa-logo-01.png',
+            'type' => 'white_logo',
         ]);
 
         $setting->file()->create([
-            'path' => 'seeders/settings/favicon.png',
-            'type' => 'favicon'
+            'path' => 'seeders/settings/icon.png',
+            'type' => 'favicon',
         ]);
 
         $setting->file()->create([
             'path' => 'seeders/settings/contact_img.png',
-            'type' => 'contact_img'
+            'type' => 'contact_img',
         ]);
 
         $setting->file()->create([
             'path' => 'seeders/settings/footer_img.jpg',
-            'type' => 'footer_img'
+            'type' => 'footer_img',
         ]);
 
         $setting->file()->create([
             'path' => 'seeders/settings/breadcrumb.jpg',
-            'type' => 'breadcrumb'
+            'type' => 'breadcrumb',
         ]);
     }
 }

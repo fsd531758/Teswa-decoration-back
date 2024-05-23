@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductTranslationsTable extends Migration
+class CreateBusinessTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CreateProductTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_translations', function (Blueprint $table) {
+        Schema::create('business_translations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('business_id');
             $table->string('locale')->index();
             $table->string('title')->nullable();
             $table->longText('short_description')->nullable();
             $table->longText('description')->nullable();
-
-            $table->unique(['product_id', 'locale']);
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->unique(['business_id', 'locale']);
+            $table->foreign('business_id')->references('id')->on('business')->onDelete('cascade');
         });
     }
 
@@ -33,6 +32,6 @@ class CreateProductTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_translations');
+        Schema::dropIfExists('business_translations');
     }
 }

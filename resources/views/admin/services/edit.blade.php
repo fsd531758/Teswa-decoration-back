@@ -85,23 +85,70 @@
 
     <div class="card card-custom">
         <div class="card-body">
-            <div class="form-group row">
-                @include('admin.components.icon', [
-                    'label' => __('words.icon'),
-                    'value' => old('icon', $service->icon),
-                    'required' => false,
-                ])
-            </div>
-            
-            <div class="form-group row">
-                @include('admin.components.switch', [
-                    'label' => __('words.status'),
-                    'name' => 'status',
-                    'val' => old('status', $service->status),
-                    'required' => false,
-                ])
-            </div>
+
+            @include('admin.components.files', [
+                'label' => __('words.images'),
+                'name' => 'images[]',
+                'multi' => 'multiple',
+                'accept' => 'image/*',
+            ])
         </div>
+
+        @if ($images)
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-primary">
+                                <div class="card-header bg-secondary py-1 m-0">
+                                    <h4 class="card-title">{{ __('words.images') }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        @foreach ($images as $file)
+                                            <div class="col-md-3">
+                                                <div class="rounded border m-1">
+                                                    <div>
+
+                                                        <img src="{{ $file->path }}"
+                                                            class="img-fluid mb-2 w-100 image-galley" alt="product image" />
+
+                                                    </div>
+                                                    <div class="form-check form-check-inline mx-2">
+                                                        <input
+                                                            class="form-check-input checkImage @error('checkImage') is-invalid @enderror"
+                                                            type="checkbox" id="image-{{ $file->id }}">
+                                                        <label class="form-check-label"
+                                                            for="image-{{ $file->id }}">{{ __('words.delete') }}</label>
+
+                                                        @error('checkImage')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                        <div id="deleted_images"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        <div class="form-group row">
+            @include('admin.components.switch', [
+                'label' => __('words.status'),
+                'name' => 'status',
+                'val' => old('status', $service->status),
+                'required' => false,
+            ])
+        </div>
+    </div>
     </div>
 
 

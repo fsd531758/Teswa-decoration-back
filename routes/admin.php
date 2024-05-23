@@ -30,22 +30,13 @@ Route::group([
             //slider routes
             Route::resource('sliders', 'SliderController');
 
-            //category routes
-            Route::resource('sections', 'SectionController');
-
-            //category routes
-            Route::resource('categories', 'CategoryController');
-
             //product routes
-            Route::resource('products', 'ProductController');
+            Route::resource('products', 'BusinessController');
 
-            //colors routes
-            Route::resource('colors', 'ColorController');
-
-            //product routes
+            //services routes
             Route::resource('services', 'ServiceController');
 
-            //product routes
+            //experiences routes
             Route::resource('experiences', 'ExperienceController');
 
             //partners routes

@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Product;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Business;
 use Illuminate\Database\Seeder;
 
-class ProductSeeder extends Seeder
+class BusinessSeeder extends Seeder
 {
 
     public function run()
@@ -19,11 +18,9 @@ class ProductSeeder extends Seeder
             'seeders/products/04.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "70",
-            "category_id" => "1",
             "ar" => [
                 "title" => "ردي فكس",
                 "short_description" => "<p>KronoFlooring الأصلي 5950 8 مللي متر</p>",
@@ -49,9 +46,6 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        $product->colors()->attach([1, 2, 3, 4, 5]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images[$i],
@@ -75,11 +69,9 @@ class ProductSeeder extends Seeder
 
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "0",
-            "price" => "65",
-            "category_id" => "1",
             "ar" => [
                 "title" => "وي باركيه كلاسيك",
                 "short_description" => "<p>شيفرون باركيه 8 مم أرضيات من خشب البلوط الاسكندنافي (8194)</p>",
@@ -104,9 +96,6 @@ class ProductSeeder extends Seeder
                                         </ul>",
             ],
         ]);
-
-        $product->colors()->attach([1, 2, 3, 4, 8, 10, 12]);
-
         for ($i = 0; $i < 2; $i++) {
             $product->files()->create([
                 "path" => $images_2[$i],
@@ -124,11 +113,9 @@ class ProductSeeder extends Seeder
             'seeders/products/12.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "90",
-            "category_id" => "1",
             "ar" => [
                 "title" => "ترندلاين برو",
                 "short_description" => "<p>ترندلاين برو الأصلي 5950 8 مللي متر</p>",
@@ -153,10 +140,6 @@ class ProductSeeder extends Seeder
                                         </ul>",
             ],
         ]);
-
-        $product->colors()->attach([1, 2, 3, 4]);
-
-
         for ($i = 0; $i < 6; $i++) {
             $product->files()->create([
                 "path" => $images_3[$i],
@@ -174,11 +157,9 @@ class ProductSeeder extends Seeder
 
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "0",
-            "price" => "70",
-            "category_id" => "1",
             "ar" => [
                 "title" => "سويس فلور",
                 "short_description" => "<p>سويس فلور الأصلي 5950 8 مللي متر</p>",
@@ -203,17 +184,12 @@ class ProductSeeder extends Seeder
                                         </ul>",
             ],
         ]);
-
-        $product->colors()->attach([8, 9, 10, 11, 12, 13]);
-
-
         for ($i = 0; $i < 5; $i++) {
             $product->files()->create([
                 "path" => $images_4[$i],
                 "type" => "image",
             ]);
         }
-
 
         //product 5
         $images_5 = [
@@ -222,11 +198,9 @@ class ProductSeeder extends Seeder
             'seeders/products/20.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "70",
-            "category_id" => "2",
             "ar" => [
                 "title" => "ليو اس بي سي",
                 "short_description" => "<p>ليو اس بي سي الأصلي 5950 4 مللي متر</p>",
@@ -252,16 +226,12 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        $product->colors()->attach([1, 2, 14, 15]);
-
-
         for ($i = 0; $i < 3; $i++) {
             $product->files()->create([
                 "path" => $images_5[$i],
                 "type" => "image",
             ]);
         }
-
 
         //product 6 cat2
         $images_6 = [
@@ -271,11 +241,9 @@ class ProductSeeder extends Seeder
             'seeders/products/24.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "0",
-            "price" => "50",
-            "category_id" => "2",
             "ar" => [
                 "title" => "ليو",
                 "short_description" => "<p>ليو الأصلي 5950 8 مللي متر</p>",
@@ -295,9 +263,6 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        $product->colors()->attach([1, 2, 3, 12, 13]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_6[$i],
@@ -313,11 +278,9 @@ class ProductSeeder extends Seeder
             'seeders/products/28.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "0",
-            "price" => "60",
-            "category_id" => "3",
             "ar" => [
                 "title" => "جلاكسى",
                 "short_description" => "<p>جلاكسى الأصلي 5950 8 مللي متر</p>",
@@ -341,9 +304,6 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        $product->colors()->attach([6, 7, 8, 15, 14]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_7[$i],
@@ -359,11 +319,9 @@ class ProductSeeder extends Seeder
             'seeders/products/32.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "70",
-            "category_id" => "3",
             "ar" => [
                 "title" => "جالكسي - خشبى",
                 "short_description" => "<p>جالكسي - خشبى الأصلي 5950 8 مللي متر</p>",
@@ -387,9 +345,6 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        $product->colors()->attach([1, 2, 7, 8, 9, 13]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_8[$i],
@@ -405,11 +360,9 @@ class ProductSeeder extends Seeder
             'seeders/products/36.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "70",
-            "category_id" => "4",
             "ar" => [
                 "title" => "مونس",
                 "short_description" => "<p>ورق جدران فاخر عالى الجودة</p>",
@@ -436,8 +389,6 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
-        $product->colors()->attach([1, 2, 3, 4, 5]);
-
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -454,11 +405,9 @@ class ProductSeeder extends Seeder
             'seeders/products/40.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "70",
-            "category_id" => "4",
             "ar" => [
                 "title" => "جيوتو",
                 "short_description" => "<p>ورق جدران فاخر عالى الجودة</p>",
@@ -486,9 +435,6 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        $product->colors()->attach([1, 2, 3, 4, 5, 6, 7]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_10[$i],
@@ -504,11 +450,9 @@ class ProductSeeder extends Seeder
             'seeders/products/44.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "0",
-            "price" => "70",
-            "category_id" => "4",
             "ar" => [
                 "title" => "تكستشر",
                 "short_description" => "<p>ورق جدران فاخر عالى الجودة</p>",
@@ -535,8 +479,6 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
-        $product->colors()->attach([12, 13, 14, 15]);
-
 
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
@@ -553,11 +495,9 @@ class ProductSeeder extends Seeder
             'seeders/products/48.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "70",
-            "category_id" => "4",
             "ar" => [
                 "title" => "غريس",
                 "short_description" => "<p>ورق جدران فاخر عالى الجودة</p>",
@@ -584,9 +524,6 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
-        $product->colors()->attach([7, 8]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_12[$i],
@@ -602,11 +539,9 @@ class ProductSeeder extends Seeder
             'seeders/products/52.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "0",
-            "price" => "95",
-            "category_id" => "5",
             "ar" => [
                 "title" => "خشب ديكورات من مادة Tile",
                 "short_description" => "<p>Tile الأصلي </p>",
@@ -629,9 +564,6 @@ class ProductSeeder extends Seeder
                                     </ul>",
             ],
         ]);
-        $product->colors()->attach([1, 2]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_13[$i],
@@ -647,43 +579,6 @@ class ProductSeeder extends Seeder
             'seeders/products/56.jpg',
         ];
 
-        $product = Product::create([
-            "status" => "1",
-            "is_trending" => "0",
-            "price" => "110",
-            "category_id" => "5",
-            "ar" => [
-                "title" => "خشب ديكورات من مادة Decking",
-                "short_description" => "<p>Decking الأصلي</p>",
-                "description" => "<p>تركيبة بلاستيك تشبه الخشب, تأتي بشكل بلاط مربع , مقسم إلى مستطيلات, سهلة الفك والتركيب على أرضية الحدائق. تعطي حديقتك رونقاً وجمالاً. متوافر باللون البني. السعر لا يشمل التركيب</p>
-                                    <ul>
-                                    <li>الطول: 30</li>
-                                    <li>العرض: 30</li>
-                                    <li>عدد القطع فى الكرتونة : 10 </li>
-                                    </ul>",
-            ],
-
-            "en" => [
-                "title" => "Ready Fix 13",
-                "short_description" => "<p>Decking Original</p>",
-                "description" => "<p>Wood Plastic Composite, it is a square tile devided into rectangles, brown colour, easy to install and uninstall on garden's floar, it gives your garden luster and beauty.</p>
-                                    <ul>
-                                    <li>Height: 30</li>
-                                    <li>width: 30</li>
-                                    <li>Number of Pcs / Carton: 10</li>
-                                    </ul>",
-            ],
-        ]);
-        $product->colors()->attach([3, 4, 5]);
-
-
-        for ($i = 0; $i < 4; $i++) {
-            $product->files()->create([
-                "path" => $images_14[$i],
-                "type" => "image",
-            ]);
-        }
-
         //product 3 cat 5
         $images_15 = [
             'seeders/products/57.jpg',
@@ -692,11 +587,9 @@ class ProductSeeder extends Seeder
             'seeders/products/60.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "30",
-            "category_id" => "6",
             "ar" => [
                 "title" => "عشب ديكور جداري 2D",
                 "short_description" => "<p>عشب ديكور جداري 2D أخضر</p>",
@@ -718,11 +611,7 @@ class ProductSeeder extends Seeder
                                     <li>Number of Pcs / Carton: 1</li>
                                     </ul>",
 
-            ],
-        ]);
-        $product->colors()->attach([5, 6, 10, 15, 14, 13]);
-
-
+            ]]);
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_15[$i],
@@ -738,11 +627,9 @@ class ProductSeeder extends Seeder
             'seeders/products/64.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "30",
-            "category_id" => "6",
             "ar" => [
                 "title" => "عشب ديكور جداري 2D",
                 "short_description" => "<p>عشب ديكور جداري 2D أخضر</p>",
@@ -766,9 +653,6 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        $product->colors()->attach([9, 10, 11, 12, 13]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_16[$i],
@@ -784,11 +668,9 @@ class ProductSeeder extends Seeder
             'seeders/products/68.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "70",
-            "category_id" => "7",
             "ar" => [
                 "title" => "طاولة خشب",
                 "short_description" => "<p>طاولة خشبية قصيرة بلون أبيض</p>",
@@ -810,9 +692,6 @@ class ProductSeeder extends Seeder
             ],
         ]);
 
-        $product->colors()->attach([1, 2, 3, 11, 12, 13]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_17[$i],
@@ -828,11 +707,9 @@ class ProductSeeder extends Seeder
             'seeders/products/72.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "30",
-            "category_id" => "7",
             "ar" => [
                 "title" => "طقم 3 طاولات دائرية",
                 "short_description" => "<p>طاولة خشبية</p>",
@@ -853,9 +730,6 @@ class ProductSeeder extends Seeder
                                             </ul>",
             ],
         ]);
-        $product->colors()->attach([1, 2, 3, 4, 5, 6]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_18[$i],
@@ -871,11 +745,9 @@ class ProductSeeder extends Seeder
             'seeders/products/76.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "0",
-            "price" => "30",
-            "category_id" => "8",
             "ar" => [
                 "title" => "طقم 3 حبه صناديق",
                 "short_description" => "<p>ثلاث صناديق خشبية</p>",
@@ -896,10 +768,6 @@ class ProductSeeder extends Seeder
                                             </ul>",
             ],
         ]);
-
-        $product->colors()->attach([6, 7, 8, 9]);
-
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_19[$i],
@@ -915,11 +783,9 @@ class ProductSeeder extends Seeder
             'seeders/products/80.jpg',
         ];
 
-        $product = Product::create([
+        $product = Business::create([
             "status" => "1",
             "is_trending" => "1",
-            "price" => "30",
-            "category_id" => "8",
             "ar" => [
                 "title" => "حامل ورد ذهبى",
                 "short_description" => "<p>حامل ورد ذهبي يليق بنباتاتك</p>",
@@ -940,9 +806,6 @@ class ProductSeeder extends Seeder
                                             </ul>",
             ],
         ]);
-
-        $product->colors()->attach([1, 2, 3, 4, 5, 6, 7, 8]);
-
         for ($i = 0; $i < 4; $i++) {
             $product->files()->create([
                 "path" => $images_20[$i],

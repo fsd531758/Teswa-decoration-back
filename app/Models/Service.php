@@ -3,14 +3,14 @@
 namespace App\Models;
 
 use App\Traits\Files\HasFile;
+use App\Traits\Files\HasFiles;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    use HasFactory, Translatable, HasFile;
-
+    use HasFactory, Translatable, HasFile, HasFiles;
 
     protected $table = 'services';
 
@@ -18,10 +18,9 @@ class Service extends Model
 
     // protected $appends = ['image'];
 
-    public $translatedAttributes = ['title','description'];
+    public $translatedAttributes = ['title', 'description'];
 
     public $timestamps = true;
-
 
     // Scopes start
     public function scopeActive($query)

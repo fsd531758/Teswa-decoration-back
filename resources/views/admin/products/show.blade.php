@@ -106,52 +106,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3">
-                        <div class="mb-7 bg-light p-5 rounded h-100">
-                            <div class="card-title">
-                                <h5 class="font-weight-bolder text-dark">{{ __('words.category') }}:</h5>
-                            </div>
-                            <p class="m-0">{{ $product->category ? $product->category->title : '' }}</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="mb-7 bg-light p-5 rounded h-100">
-                            <div class="card-title">
-                                <h5 class="font-weight-bolder text-dark">{{ __('words.price') }}:</h5>
-                            </div>
-                            <p class="m-0">{{ $product->price }} @lang('words.sar')</p>
-                        </div>
-                    </div>
                 </div>
                 <br>
-
-                {{-- colors --}}
-                @if ($product->colors->isNotEmpty())
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <div class="mb-7 bg-light p-5 rounded h-100">
-                                <div class="card-title">
-                                    <h5 class="font-weight-bolder text-dark">{{ __('words.colors') }}:</h5>
-                                </div>
-
-                                <div class='row g-4'>
-                                    @foreach ($product->colors as $color)
-                                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mt-4">
-                                            <div class="d-flex justify-content-center rounded text-center"
-                                                style="background-color: {{ $color->hex }} ; min-height:30px;width:30px">
-                                                {{-- {{ $color->title }} --}}
-                                            </div>
-                                            {!! $color->title !!}
-                                        </div>
-                                        {{-- <p class="m-0">{!! $specification->description !!}</p> --}}
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endif
-                {{-- <br>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-7 bg-light p-5 rounded h-100">

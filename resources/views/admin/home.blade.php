@@ -7,7 +7,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row mb-3">
-             <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="col-12 d-flex align-items-center justify-content-center">
                 <img src="{{ settings()->logo }}" class="img-fluid rounded" style="width:150px;" alt="logo">
             </div>
             {{-- <div class="col-12 d-flex align-items-center justify-content-center">
@@ -36,33 +36,7 @@
 
 
 
-            @permission('read-sections')
-                <div class="col-xl-4">
-                    <div class="card card-custom card-stretch gutter-b wave wave-primary wave-animate-slow">
-                        <div class="card-body">
-                            <i class="fas fa-layer-group  fa-3x"></i>
-                            <span
-                                class="card-title font-weight-bolder text-dark-75 font-size-h1 mb-0 mt-6 d-block">{{ \App\Models\Section::count() }}</span>
-                            <span class="font-weight-bold font-size-sm"><a
-                                    href="{{ route('sections.index') }}">{{ __('words.sections') }}</a></span>
-                        </div>
-                    </div>
-                </div>
-            @endpermission
 
-            @permission('read-categories')
-                <div class="col-xl-4">
-                    <div class="card card-custom card-stretch gutter-b wave wave-primary wave-animate-slow">
-                        <div class="card-body">
-                            <i class="far fa-lightbulb  fa-3x"></i>
-                            <span
-                                class="card-title font-weight-bolder text-dark-75 font-size-h1 mb-0 mt-6 d-block">{{ \App\Models\Category::count() }}</span>
-                            <span class="font-weight-bold font-size-sm"><a
-                                    href="{{ route('categories.index') }}">{{ __('words.categories') }}</a></span>
-                        </div>
-                    </div>
-                </div>
-            @endpermission
 
             @permission('read-products')
                 <div class="col-xl-4">
@@ -70,7 +44,7 @@
                         <div class="card-body">
                             <i class="fas fa-chair  fa-3x"></i>
                             <span
-                                class="card-title font-weight-bolder text-dark-75 font-size-h1 mb-0 mt-6 d-block">{{ \App\Models\Product::count() }}</span>
+                                class="card-title font-weight-bolder text-dark-75 font-size-h1 mb-0 mt-6 d-block">{{ \App\Models\Business::count() }}</span>
                             <span class="font-weight-bold font-size-sm"><a
                                     href="{{ route('products.index') }}">{{ __('words.products') }}</a></span>
                         </div>

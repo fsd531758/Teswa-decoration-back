@@ -4,28 +4,21 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\ProductRequest;
-use App\Models\Category;
-use App\Models\Color;
-use App\Models\Product;
-use App\Models\Project;
+use App\Models\Business;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
-class ProductController extends Controller
+class BusinessController extends Controller
 {
     private $product;
-    private $category;
-    private $color;
 
-    public function __construct(Product $product, Category $category, Color $color)
+    public function __construct(Business $product)
     {
         $this->middleware(['permission:read-products'])->only('index', 'show');
         $this->middleware(['permission:create-products'])->only('create', 'store');
         $this->middleware(['permission:update-products'])->only('edit', 'update');
         $this->middleware(['permission:delete-products'])->only('destroy');
         $this->product = $product;
-        $this->category = $category;
-        $this->color = $color;
     }
 
     public function index()
@@ -41,10 +34,8 @@ class ProductController extends Controller
     public function create()
     {
         try {
-            $categories = $this->category->active()->latest('id')->get();
-            $colors = $this->color->active()->latest('id')->get();
 
-            return view('admin.products.create', compact('categories', 'colors'));
+            return view('admin.products.create');
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
@@ -53,15 +44,17 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         try {
-            if (!$request->has('status'))
+            if (!$request->has('status')) {
                 $request->request->add(['status' => 0]);
-            else
+            } else {
                 $request->request->add(['status' => 1]);
+            }
 
-            if (!$request->has('is_trending'))
+            if (!$request->has('is_trending')) {
                 $request->request->add(['is_trending' => 0]);
-            else
+            } else {
                 $request->request->add(['is_trending' => 1]);
+            }
 
             $requested_data = $request->except(['_token', 'profile_avatar_remove', 'images', 'colors']);
             $product = $this->product->create($requested_data);
@@ -82,44 +75,42 @@ class ProductController extends Controller
         }
     }
 
-    public function show(Product $product)
+    public function show(Business $product)
     {
         try {
             $images = $product->files()->where('type', '!=', 'cover')->get();
-            $colors = $this->color->active()->latest('id')->get();
 
-            return view('admin.products.show', compact('product', 'images', 'colors'));
+            return view('admin.products.show', compact('product', 'images'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
     }
 
-    public function edit(Product $product)
+    public function edit(Business $product)
     {
         try {
             $images = $product->files()->where('type', '!=', 'cover')->get();
-            $categories = $this->category->latest('id')->get();
 
-            $all_colors = $this->color->active()->get();
-            $colors = $product->colors->pluck('id');
-            return view('admin.products.edit', compact('product', 'images', 'categories', 'all_colors', 'colors'));
+            return view('admin.products.edit', compact('product', 'images'));
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
     }
 
-    public function update(ProductRequest $request, Product $product)
+    public function update(ProductRequest $request, Business $product)
     {
         try {
-            if (!$request->has('status'))
+            if (!$request->has('status')) {
                 $request->request->add(['status' => 0]);
-            else
+            } else {
                 $request->request->add(['status' => 1]);
+            }
 
-            if (!$request->has('is_trending'))
+            if (!$request->has('is_trending')) {
                 $request->request->add(['is_trending' => 0]);
-            else
+            } else {
                 $request->request->add(['is_trending' => 1]);
+            }
 
             $requested_data = $request->except(['_token', 'profile_avatar_remove', 'images', 'deleted_files', 'colors']);
             $requested_data['updated_at'] = Carbon::now();
@@ -136,7 +127,6 @@ class ProductController extends Controller
             }
             //end colors edit
 
-
             // $product->updateFile();
             $product->updateFiles();
 
@@ -146,7 +136,7 @@ class ProductController extends Controller
         }
     }
 
-    public function destroy(Product $product)
+    public function destroy(Business $product)
     {
         try {
             $product->deleteFiles();
