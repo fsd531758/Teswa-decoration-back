@@ -31,7 +31,13 @@ Route::group([
             Route::resource('sliders', 'SliderController');
 
             //product routes
-            Route::resource('products', 'BusinessController');
+            Route::get('products', 'BusinessController@index')->name('products.index');
+            Route::get('/products/create', 'BusinessController@create')->name('products.create');
+            Route::post('products', 'BusinessController@store')->name('products.store');
+            Route::get('products/{product}', 'BusinessController@show')->name('products.show');
+            Route::get('products/{product}/edit', 'BusinessController@edit')->name('products.edit');
+            Route::put('products/{product}', 'BusinessController@update')->name('products.update');
+            Route::delete('products/{product}', 'BusinessController@destroy')->name('products.destroy');
 
             //services routes
             Route::resource('services', 'ServiceController');

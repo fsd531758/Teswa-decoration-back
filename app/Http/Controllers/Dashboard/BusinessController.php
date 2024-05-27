@@ -21,7 +21,7 @@ class BusinessController extends Controller
         $this->product = $product;
     }
 
-    public function index()
+    public function index(Request $request)
     {
         try {
             $products = $this->product->latest('id')->get();
@@ -44,6 +44,7 @@ class BusinessController extends Controller
     public function store(ProductRequest $request)
     {
         try {
+
             if (!$request->has('status')) {
                 $request->request->add(['status' => 0]);
             } else {
@@ -96,7 +97,6 @@ class BusinessController extends Controller
             return redirect()->back()->with(['error' => __('message.something_wrong')]);
         }
     }
-
     public function update(ProductRequest $request, Business $product)
     {
         try {
@@ -111,11 +111,10 @@ class BusinessController extends Controller
             } else {
                 $request->request->add(['is_trending' => 1]);
             }
-
+            //
             $requested_data = $request->except(['_token', 'profile_avatar_remove', 'images', 'deleted_files', 'colors']);
             $requested_data['updated_at'] = Carbon::now();
             $product->update($requested_data);
-
             //edit colors
             $product->colors()->detach();
 

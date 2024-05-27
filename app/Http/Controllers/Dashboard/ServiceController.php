@@ -39,13 +39,15 @@ class ServiceController extends Controller
     public function store(ServiceRequest $request)
     {
         try {
-            if (!$request->has('status'))
+            if (!$request->has('status')) {
                 $request->request->add(['status' => 0]);
-            else
+            } else {
                 $request->request->add(['status' => 1]);
+            }
 
             $requested_data = $request->except(['_token', 'profile_avatar_remove']);
             $service = $this->service->create($requested_data);
+            $service->uploadFiles();
 
             return redirect()->route('services.index')->with(['success' => __('message.created_successfully')]);
         } catch (\Exception $e) {
@@ -55,26 +57,29 @@ class ServiceController extends Controller
 
     public function show(Service $service)
     {
-        return view('admin.services.show', compact('service'));
+        $images = $service->files()->where('type', '!=', 'cover')->get();
+
+        return view('admin.services.show', compact('service', "images"));
     }
 
     public function edit(Service $service)
-    {
-        return view('admin.services.edit', compact('service'));
-    }
+    {$images = $service->files()->where('type', '!=', 'cover')->get();
+
+        return view('admin.services.edit', compact('service', 'images'));}
 
     public function update(ServiceRequest $request, Service $service)
     {
         try {
-            if (!$request->has('status'))
+            if (!$request->has('status')) {
                 $request->request->add(['status' => 0]);
-            else
+            } else {
                 $request->request->add(['status' => 1]);
+            }
 
             $requested_data = $request->except(['_token', 'profile_avatar_remove']);
             $requested_data['updated_at'] = Carbon::now();
             $service->update($requested_data);
-
+            $service->updateFiles();
 
             return redirect()->route('services.index')->with(['success' => __('message.updated_successfully')]);
         } catch (\Exception $e) {
@@ -86,6 +91,7 @@ class ServiceController extends Controller
     {
         try {
             $service->delete();
+            $service->deleteFiles();
             return redirect()->route('services.index')->with(['success' => __('message.deleted_successfully')]);
         } catch (\Exception $e) {
             return redirect()->back()->with(['error' => __('message.deleted_successfully')]);

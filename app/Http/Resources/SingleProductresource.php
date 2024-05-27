@@ -15,14 +15,12 @@ class SingleProductresource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'                  => $this->id,
-            'title'               => $this->title,
-            'short_description'   => $this->short_description,
-            'description'         => $this->description,
-            'price'               => $this->price,
-            'images'              => ImageResource::collection($this->files),
-            'category'            => new CategoryResource($this->category),
-            'colors'              => ColorResource::collection($this->colors),
+            'id' => $this->id,
+            'title' => $this->title,
+            'short_description' => $this->short_description,
+            'description' => $this->description,
+            'price' => $this->price,
+            'images' => ImageResource::collection($this->files),
         ];
     }
 }

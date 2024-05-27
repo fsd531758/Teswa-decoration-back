@@ -5,6 +5,7 @@ use App\Http\Controllers\API\ContactUsController;
 use App\Http\Controllers\API\HomeController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\QuoteRequestController;
+use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\SettingContactController;
 use App\Http\Controllers\API\SettingController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,8 @@ Route::group(['middleware' => 'APILocalization'], function () {
         Route::get('about', [AboutController::class, 'index']);
         //our-business Route
         Route::get('our-business', [ProductController::class, 'index']);
+        //single-service Route
+        Route::get('services/{id}', [ServiceController::class, 'get_service']);
         //contact us Route
         Route::post('contact', [ContactUsController::class, 'contact']);
         //contact us Route

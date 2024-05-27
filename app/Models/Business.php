@@ -37,6 +37,7 @@ class Business extends Model
     // Scopes end
 
     // accessors & Mutator start
+    // this section is responsible for getting the image in api controller
     public function getImageAttribute()
     {
         $image = $this->files->where('type', 'image')->first();

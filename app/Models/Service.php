@@ -16,7 +16,7 @@ class Service extends Model
 
     protected $guarded = [];
 
-    // protected $appends = ['image'];
+    protected $appends = ['image'];
 
     public $translatedAttributes = ['title', 'description'];
 
@@ -30,11 +30,11 @@ class Service extends Model
     // Scopes end
 
     // accessors & Mutator start
-    // public function getImageAttribute()
-    // {
-    //     $image = $this->file()->first();
-    //     return $image ? $image->path : asset('uploads/default_image.png');
-    // }
+    public function getImageAttribute()
+    {
+        $image = $this->file()->first();
+        return $image ? $image->path : asset('uploads/seeders/sliders/slider_img_4.jpg');
+    }
 
     public function getActive()
     {
